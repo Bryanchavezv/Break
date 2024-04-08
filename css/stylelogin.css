@@ -1,0 +1,64 @@
+/*------------------------------------------------*/
+/* Configuración general */
+/*------------------------------------------------*/
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+/*------------------------------------------------*/
+/* Footer - Final pagina */
+/*------------------------------------------------*/
+.custom-footer {
+    background-color: #213b52e1;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/*------------------------------------------------*/
+/* Botón de entrar login */
+/*------------------------------------------------*/
+.custom-button {
+    background-color: #fdc134;
+    color: #213b52;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border: 2px solid #fdc134;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.custom-button:hover {
+    background-color: #213b52e0;
+}
+
+/*------------------------------------------------*/
+/* Botón de volver a pagina de inicio */
+/*------------------------------------------------*/
+.back-to-home {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #fdc134;
+    color: #f7f7f7;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #213b52e0;
+}
