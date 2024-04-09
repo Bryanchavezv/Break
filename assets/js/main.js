@@ -40,14 +40,8 @@
 
 
 
-
-
-
   
-  
-  /**
-   * Animación al desplazarse
-   */
+  /*** Animación al desplazarse  ***/
   window.addEventListener('load', () => { // Añade un event listener al evento 'load'
     AOS.init({ // Inicializa la librería de animaciones AOS
       duration: 1500, // Duración de la animación (en milisegundos)
