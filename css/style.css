@@ -1,6 +1,3 @@
-/*------------------------------------------------*/
-/* Configuración general */
-/*------------------------------------------------*/
 
 /* Estilos para los enlaces */
 a {
@@ -15,14 +12,39 @@ a:hover {
 }
 
 /* Estilos para los títulos (h1, h2, h3, h4, h5, h6) */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway", sans-serif; /* Fuente para los títulos */
 }
+
+/* carousel */
+
+.d-item {
+  height: 500px;
+  
+}
+
+.d-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.btn-get-started {
+  color: #213b52; /* Color del texto */
+  border-radius: 50px; /* Borde redondeado */
+  padding: 8px 35px 10px 35px; /* Relleno */
+  border: 2px solid #fdc134; /* Borde */
+  transition: all ease-in-out 0.3s; /* Transición suave */
+  display: inline-block; /* Mostrar como bloque */
+  background: #fdc134; /* Color de fondo */
+}
+
+.btn-get-started:hover {
+  background: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto */
+}
+
 
 /*------------------------------------------------*/
 /* Botón de volver arriba .Clase */
@@ -105,61 +127,6 @@ h6 {
 }
 
 
-
-
-/*--------------------------------------------------------------
-# Secciones generales
---------------------------------------------------------------*/
-section {
-  padding: 60px 0; /* Relleno */
-  overflow: hidden; /* Ocultar desbordamiento */
-}
-
-.section-bg {
-  background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%); /* Degradado lineal */
-}
-
-.section-title {
-  text-align: center; /* Alinear al centro */
-  padding-bottom: 40px; /* Relleno inferior */
-}
-
-.section-title h2 {
-  font-size: 32px; /* Tamaño del texto */
-  font-weight: 600; /* Grosor del texto */
-  text-transform: uppercase; /* Transformación de texto en mayúsculas */
-  margin-bottom: 20px; /* Margen inferior */
-  padding-bottom: 20px; /* Relleno inferior */
-  position: relative; /* Posición relativa */
-  font-family: "Poppins", sans-serif; /* Familia de fuente */
-  color: #213b52; /* Color del texto */
-}
-
-.section-title h2::before {
-  content: ""; /* Contenido vacío */
-  position: absolute; /* Posición absoluta */
-  display: block; /* Mostrar como bloque */
-  width: 120px; /* Ancho */
-  height: 1px; /* Altura */
-  background: #ddd; /* Color de fondo */
-  bottom: 1px; /* Posición desde la parte inferior */
-  left: calc(50% - 60px); /* Posición a la izquierda */
-}
-
-.section-title h2::after {
-  content: ""; /* Contenido vacío */
-  position: absolute; /* Posición absoluta */
-  display: block; /* Mostrar como bloque */
-  width: 40px; /* Ancho */
-  height: 3px; /* Altura */
-  background: #fdc134; /* Color de fondo */
-  bottom: 0; /* Posición desde la parte inferior */
-  left: calc(50% - 20px); /* Posición a la izquierda */
-}
-
-.section-title p {
-  margin-bottom: 0; /* Margen inferior */
-}
 
 
 /*--------------------------------------------------------------
