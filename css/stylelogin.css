@@ -1,6 +1,4 @@
-/*------------------------------------------------*/
-/* Configuración general */
-/*------------------------------------------------*/
+/*--------------- Configuracion general ------------------*/
 
 .divider:after,
 .divider:before {
@@ -9,10 +7,7 @@
     height: 1px;
     background: #eee;
 }
-
-/*------------------------------------------------*/
-/* Footer - Final pagina */
-/*------------------------------------------------*/
+/*--------------- Pie de pagina ------------------*/
 .custom-footer {
     background-color: #213b52e1;
     color: #fff;
@@ -22,10 +17,8 @@
     width: 100%;
     z-index: -1;
 }
+/*--------------- Boton entrar login ------------------*/
 
-/*------------------------------------------------*/
-/* Botón de entrar login */
-/*------------------------------------------------*/
 .custom-button {
     background-color: #fdc134;
     color: #213b52;
@@ -41,9 +34,8 @@
     background-color: #213b52e0;
 }
 
-/*------------------------------------------------*/
-/* Botón de volver a pagina de inicio */
-/*------------------------------------------------*/
+/*--------------- Boton volver a inicio ------------------*/
+
 .back-to-home {
     position: fixed;
     bottom: 15px;

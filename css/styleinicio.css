@@ -1,93 +1,58 @@
-/*--------------------------------------------------------------
-# NavBar Lateral, Chat, Carrousel - Html Inicio
---------------------------------------------------------------*/
+/*--------------- Navbar ------------------*/
 
-.navbar-nav .nav-link {
-    color: #fff;
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
-  }
-  .navbar-brand {
-    font-weight: bold;
-  }
-  .nav-link i {
-    margin-right: 10px; /* Espacio a la derecha de los iconos */
-  }
-  
-  /* Estilos personalizados para el navbar lateral izquierdo */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 200px;
-    background-color: #f52c2c;
-    padding-top: 20px; /* Ajusta el espacio superior del navbar */
-  }
+.navbar {
+  position: fixed; /* Fija navbar  */
+  top: 0; /* distancia parte superior  */
+  left: 0; /* distancia desde el borde izquierdo  */
+  bottom: 0; /* distancia desde la parte inferior  */
+  width: 215px; /* Ancho navbar */
+  padding-top: 20px; /* Espacio parte superior navbar */
+  background-color: #333; /* fondo navbar */
+}
 
-  
-  
-  .navbar-nav {
-   width: 200px; /* Ancho del navbar */
-  overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
-  position: fixed; /* Fija la posición del navbar */
-  top: 130px; /* Distancia desde la parte superior de la pantalla */
-  left: 0; /* Lo posiciona en la parte izquierda */
-  bottom: 0; /* Hace que el navbar ocupe toda la altura disponible */
-  }
-  
-  
-  .navbar-nav .nav-link {
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-  }
-  
-  .container {
-    margin-left: 400px;
-  }
-  /* Estilos para el carrusel */
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-  }
-  .carousel-item img:nth-child(1),
-  .carousel-item img:nth-child(2),
-  .carousel-item img:nth-child(3) {
-    object-fit: cover;
-    width: 17%;
-    float: left;
-    margin-right: 100px; /* Ajusta el margen derecho entre las partes */
-  }
-  
-  
-  .chat-option {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  
-  .copyright {
-    position: absolute; /* Posición absoluta para fijar en la parte inferior */
-    bottom: 0; /* Fijar en la parte inferior */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-40%); /* Ajustar al centro horizontal */
-    width: 100%; /* Ocupar todo el ancho */
-    text-align: center; /* Alinear al centro */
-  }
-  
-  .credits {
-    position: absolute; /* Posición absoluta para fijar en la parte inferior */
-    bottom: 20px; /* Fijar en la parte inferior con un pequeño espacio */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translateX(-40%); /* Ajustar al centro horizontal */
-    width: 100%; /* Ocupar todo el ancho */
-    text-align: center; /* Alinear al centro */
-    font-size: 13px; /* Tamaño del texto */
-  }
-  
-  
-  
+.navbar-nav {
+  width: 200px; /* Ancho  navbar */
+  position: fixed; /* Fija navbar */
+  top: 150px; /* distancia parte superior */
+  bottom: 0; /* distancia desde la parte inferior */
+}
+
+.nav-link {
+  text-decoration: none; /* Sin subrayar */
+  color: white; /* Color enlace */
+  padding: 10px 20px; /* Espacios enlaces */
+}
+
+/*--------------- Tarjetas ------------------*/
+.container {
+  margin-left: 400px; /* Espacio a la izq del contenedor */
+}
+
+.custom-card-img {
+  height: 250px; /* Altura imagen en las tarjetas */
+  object-fit: cover; /* Cubre el contenedor */
+}
+
+a {
+  text-decoration: none; /* Sin subrayar */
+}
+
+/*--------------- Pie de pagina------------------*/
+.copyright {
+  position: absolute; /* Posición absoluta */
+  bottom: 0; /* Fijar parte inferior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-40%); /* Ajustar centro horizontal */
+  width: 100%; /* Ocupa todo el ancho */
+  text-align: center; /* Alinea al centro */
+}
+
+.credits {
+  position: absolute; /* Posición absoluta  */
+  bottom: 20px; /* Fijar y ajustar parte inferior  */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-40%); /* Ajustar al centro horizontal */
+  width: 100%; /* Ocupa todo el ancho */
+  text-align: center; /* Alinea al centro */
+  font-size: 13px; /* Tamaño de letra */
+}
