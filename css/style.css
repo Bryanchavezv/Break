@@ -1,32 +1,52 @@
-/*------------------------------------------------*/
-/* Configuración general */
-/*------------------------------------------------*/
+
 
 /* Estilos para los enlaces */
 a {
-  color: #fdc134; /* Color de los enlaces */
-  text-decoration: none; /* Sin subrayado por defecto */
+  color: #fdc134; /* Color enlace */
+  text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos para los enlaces cuando se pasan por encima */
+/* Estilos para los enlaces hover */
 a:hover {
-  color: #fdd067; /* Color del enlace al pasar el cursor sobre él */
-  text-decoration: none; /* Sin subrayado al pasar el cursor sobre él */
+  color: #fdd067; /* Color enlace */
+  text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos para los títulos (h1, h2, h3, h4, h5, h6) */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Estilos para los títulos */
+h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway", sans-serif; /* Fuente para los títulos */
 }
 
-/*------------------------------------------------*/
-/* Botón de volver arriba .Clase */
-/*------------------------------------------------*/
+/* Carousel */
+.d-item {
+  height: 500px; /* Altura carrusel */
+  
+}
+
+.d-img {
+  height: 100%; /* Altura imagen dentro carrusel */
+  object-fit: cover; /* Tamaño y recorte para cubrir el contenedor */
+  filter: brightness(0.6); /* Brillo de la imagen para oscurecerla */
+}
+
+.btn-get-started {
+  color: #213b52; /* Color del texto */
+  border-radius: 50px; /* Borde redondeado */
+  padding: 8px 35px 10px 35px; /* Relleno */
+  border: 2px solid #fdc134; /* Borde */
+  transition: all ease-in-out 0.3s; /* Transición suave */
+  display: inline-block; /* Mostrar como bloque */
+  background: #fdc134; /* Color de fondo */
+}
+
+.btn-get-started:hover {
+  background: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto */
+}
+
+
+
+/*--------------- Botón de volver arriba ------------------*/
 
 /* Estilos para el botón de volver arriba */
 .back-to-top {
@@ -51,7 +71,7 @@ h6 {
   line-height: 0; /* Alineación vertical del icono */
 }
 
-/* Estilos para el botón al pasar el cursor sobre él */
+/* Estilos para el botón hover */
 .back-to-top:hover {
   background: #fdc134; /* Color de fondo al pasar el cursor sobre él */
   color: #fff; /* Color del texto al pasar el cursor sobre él */
@@ -64,9 +84,9 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
-# Sección del Inicio .ID
---------------------------------------------------------------*/
+/*--------------- Sección del Inicio ------------------*/
+
+/* Fondo inicio */
 .inicio {
   width: 100%; /* Ancho completo */
   padding: 0 0 0 0; /* Relleno */
@@ -89,6 +109,7 @@ h6 {
   font-size: 22px; /* Tamaño del texto */
 }
 
+/* Boton comencemos */
 .inicio .btn-get-started {
   color: #213b52; /* Color del texto */
   border-radius: 50px; /* Borde redondeado */
@@ -106,65 +127,9 @@ h6 {
 
 
 
-
-/*--------------------------------------------------------------
-# Secciones generales
---------------------------------------------------------------*/
-section {
-  padding: 60px 0; /* Relleno */
-  overflow: hidden; /* Ocultar desbordamiento */
-}
-
-.section-bg {
-  background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%); /* Degradado lineal */
-}
-
-.section-title {
-  text-align: center; /* Alinear al centro */
-  padding-bottom: 40px; /* Relleno inferior */
-}
-
-.section-title h2 {
-  font-size: 32px; /* Tamaño del texto */
-  font-weight: 600; /* Grosor del texto */
-  text-transform: uppercase; /* Transformación de texto en mayúsculas */
-  margin-bottom: 20px; /* Margen inferior */
-  padding-bottom: 20px; /* Relleno inferior */
-  position: relative; /* Posición relativa */
-  font-family: "Poppins", sans-serif; /* Familia de fuente */
-  color: #213b52; /* Color del texto */
-}
-
-.section-title h2::before {
-  content: ""; /* Contenido vacío */
-  position: absolute; /* Posición absoluta */
-  display: block; /* Mostrar como bloque */
-  width: 120px; /* Ancho */
-  height: 1px; /* Altura */
-  background: #ddd; /* Color de fondo */
-  bottom: 1px; /* Posición desde la parte inferior */
-  left: calc(50% - 60px); /* Posición a la izquierda */
-}
-
-.section-title h2::after {
-  content: ""; /* Contenido vacío */
-  position: absolute; /* Posición absoluta */
-  display: block; /* Mostrar como bloque */
-  width: 40px; /* Ancho */
-  height: 3px; /* Altura */
-  background: #fdc134; /* Color de fondo */
-  bottom: 0; /* Posición desde la parte inferior */
-  left: calc(50% - 20px); /* Posición a la izquierda */
-}
-
-.section-title p {
-  margin-bottom: 0; /* Margen inferior */
-}
+/*--------------- Footer - Final ------------------*/
 
 
-/*--------------------------------------------------------------
-# Footer - Final
---------------------------------------------------------------*/
 .footer {
   background: url("../assets/img/footer-bg.jpg") center center no-repeat; /* Imagen de fondo centrada */
   color: #fff; /* Color del texto */
