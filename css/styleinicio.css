@@ -1,5 +1,6 @@
 /*--------------- Navbar ------------------*/
 
+/* Barra lateral */
 .navbar {
   position: fixed; /* Fija navbar  */
   top: 0; /* distancia parte superior  */
@@ -10,6 +11,7 @@
   background-color: #333; /* fondo navbar */
 }
 
+/* Posicion links */
 .navbar-nav {
   width: 200px; /* Ancho  navbar */
   position: fixed; /* Fija navbar */
@@ -17,6 +19,7 @@
   bottom: 0; /* distancia desde la parte inferior */
 }
 
+/* Links  */
 .nav-link {
   text-decoration: none; /* Sin subrayar */
   color: white; /* Color enlace */

@@ -2,22 +2,22 @@
   "use strict";
 
   /**
-   * Función  selección fácil
+   * Función  animacion index
    */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
-      return [...document.querySelectorAll(el)] // Selecciona todos los elementos que coincidan con el selector
+      return [...document.querySelectorAll(el)] 
     } else {
-      return document.querySelector(el) // Selecciona el primer elemento que coincida con el selector
+      return document.querySelector(el) 
     }
   }
 
   /**
-   * Función de eventos de desplazamiento fácil
+   * Función de desplazamiento fácil
    */
   const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener) // Añade un event listener de scroll al elemento especificado
+    el.addEventListener('scroll', listener) 
   }
 
 
@@ -25,29 +25,29 @@
   /**
    * Botón de "volver arriba"
    */
-  let backtotop = select('.back-to-top') // Selecciona el elemento con la clase .back-to-top
-  if (backtotop) { // Verifica si el elemento existe
+  let backtotop = select('.back-to-top') 
+  if (backtotop) { 
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) { // Verifica si la posición de desplazamiento es mayor que 100 píxeles
-        backtotop.classList.add('active') // Añade la clase 'active' al elemento
+      if (window.scrollY > 100) { 
+        backtotop.classList.add('active') 
       } else {
-        backtotop.classList.remove('active') // Elimina la clase 'active' del elemento
+        backtotop.classList.remove('active') 
       }
     }
-    window.addEventListener('load', toggleBacktotop) // Añade un event listener al evento 'load' que activa/desactiva el botón
-    onscroll(document, toggleBacktotop) // Añade un event listener de scroll al documento que activa/desactiva el botón
+    window.addEventListener('load', toggleBacktotop) 
+    onscroll(document, toggleBacktotop) 
   }
 
 
 
   
   /*** Animación al desplazarse  ***/
-  window.addEventListener('load', () => { // Añade un event listener al evento 'load'
-    AOS.init({ // Inicializa la librería de animaciones AOS
-      duration: 1500, // Duración de la animación (en milisegundos)
-      easing: "ease-in-out", // Tipo de easing
-      once: true, // Si la animación se ejecuta solo una vez
-      mirror: false // Si se debe invertir la dirección de la animación en función del scroll
+  window.addEventListener('load', () => { 
+    AOS.init({ 
+      duration: 1500, 
+      easing: "ease-in-out", 
+      once: true, 
+      mirror: false 
     });
   });
 

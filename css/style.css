@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Boton contactanos */
 .btn-get-started {
   color: #213b52; /* Color del texto */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   padding: 8px 35px 10px 35px; /* Relleno */
   border: 2px solid #fdc134; /* Borde */
   transition: all ease-in-out 0.3s; /* Transición suave */
@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6 {
   background: #fdc134; /* Color botón */
   width: 40px; /* Ancho botón */
   height: 40px; /* Altura botón */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   transition: all 0.4s; /* Transición suave */
 }
 
@@ -110,7 +110,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Boton comencemos */
 .inicio .btn-get-started {
   color: #213b52; /* Color del texto */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   padding: 8px 35px 10px 35px; /* Relleno */
   border: 2px solid #fdc134; /* Borde */
   transition: all ease-in-out 0.3s; /* Transición suave */
@@ -182,7 +182,7 @@ h1,h2,h3,h4,h5,h6 {
   background: #fff; /* Color de fondo */
   padding: 6px 10px; /* Relleno */
   position: relative; /* Posición relativa */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
   text-align: left; /* Alinear a la izquierda */
 }
@@ -207,7 +207,7 @@ h1,h2,h3,h4,h5,h6 {
   background: #fdc134; /* Color de fondo */
   color: #fff; /* Color del texto */
   transition: 0.3s; /* Transición */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
@@ -229,7 +229,7 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1; /* Altura de línea */
   padding: 8px 0; /* Relleno */
   margin-right: 4px; /* Margen derecho */
-  border-radius: 50%; /* Borde redondeado */
+  border-radius: 50%; /* Borde redondo */
   text-align: center; /* Alinear al centro */
   width: 36px; /* Ancho */
   height: 36px; /* Altura */

@@ -45,7 +45,7 @@
     height: 50px; /* Altura del botón */
     background-color: #fdc134; /* Color fondo del botón */
     color: #f7f7f7; /* Color texto del botón */
-    border-radius: 50%; /* Borde redondeado */
+    border-radius: 50%; /* Borde redondo */
     text-align: center; /* Texto al centro */
     line-height: 50px; /* Altura del botón */
     font-size: 24px; /* Tamaño fuente */
