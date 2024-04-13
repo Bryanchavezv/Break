@@ -1,56 +1,57 @@
 /*--------------- Configuracion general ------------------*/
 
+/*  Separador (--o--) */
 .divider:after,
 .divider:before {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #eee;
+    content: ""; /* Contenido  los pseudo-elementos */
+    flex: 1; /* Expandir al contenedor */
+    height: 1px; /* Altura línea */
+    background: #eee; /* Color línea */
 }
-/*--------------- Pie de pagina ------------------*/
-.custom-footer {
-    background-color: #213b52e1;
-    color: #fff;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-}
-/*--------------- Boton entrar login ------------------*/
 
+/* Barra inferior */
+.custom-footer {
+    background-color: #213b52e1; /* Color barra */
+    color: #fff; /* Color texto */
+    padding: 15px; /* Espaciado interno */
+    position: fixed; /* Posición fija */
+    bottom: 0; /* Parte inferior */
+    width: 100%; /* Ancho total */
+    z-index: -1; /* Prioridad superposicion */
+}
+
+/* Boton entrar login */
 .custom-button {
-    background-color: #fdc134;
-    color: #213b52;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    border: 2px solid #fdc134;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
+    background-color: #fdc134; /* Color fondo botón */
+    color: #213b52; /* Color texto botón */
+    padding-left: 2.5rem; /* Espaciado izquierdo */
+    padding-right: 2.5rem; /* Espaciado derecho */
+    border: 2px solid #fdc134; /* Borde del botón */
+    width: 100%; /* Ancho total */
+    max-width: 200px; /* Ancho máximo */
+    margin: 0 auto; /* Margen automático */
 }
 
 .custom-button:hover {
-    background-color: #213b52e0;
+    background-color: #213b52e0; /* Color al pasar el cursor */
 }
 
-/*--------------- Boton volver a inicio ------------------*/
-
+/*  Boton volver a inicio */
 .back-to-home {
-    position: fixed;
-    bottom: 15px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #fdc134;
-    color: #f7f7f7;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-    transition: all 0.3s ease;
+    position: fixed; /* Posición fija */
+    bottom: 15px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde el borde derecho */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    background-color: #fdc134; /* Color fondo del botón */
+    color: #f7f7f7; /* Color texto del botón */
+    border-radius: 50%; /* Borde redondeado */
+    text-align: center; /* Texto al centro */
+    line-height: 50px; /* Altura del botón */
+    font-size: 24px; /* Tamaño fuente */
+    transition: all 0.3s ease; /* Transición suave */
 }
 
 .back-to-home:hover {
-    background-color: #213b52e0;
+    background-color: #213b52e0; /* Color al pasar el cursor */
 }

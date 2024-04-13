@@ -1,5 +1,3 @@
-
-
 /* Estilos para los enlaces */
 a {
   color: #fdc134; /* Color enlace */
@@ -51,31 +49,30 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Estilos para el botón de volver arriba */
 .back-to-top {
-  position: fixed; /* Posición fija en la ventana del navegador */
+  position: fixed; /* Posición fija */
   visibility: hidden; /* Inicialmente no visible */
   opacity: 0; /* Opacidad inicial */
   right: 15px; /* Posición a la derecha */
   bottom: 15px; /* Posición en la parte inferior */
-  z-index: 99999; /* Z-index para superponer sobre otros elementos */
-  background: #fdc134; /* Color de fondo del botón */
-  width: 40px; /* Ancho del botón */
-  height: 40px; /* Altura del botón */
+  z-index: 99999; /* Superponer */
+  background: #fdc134; /* Color botón */
+  width: 40px; /* Ancho botón */
+  height: 40px; /* Altura botón */
   border-radius: 50px; /* Borde redondeado */
   transition: all 0.4s; /* Transición suave */
-  display: none; /* Ocultar inicialmente */
 }
 
 /* Icono dentro del botón */
 .back-to-top i {
-  font-size: 24px; /* Tamaño del icono */
-  color: #fff; /* Color del icono */
-  line-height: 0; /* Alineación vertical del icono */
+  font-size: 24px; /* Tamaño icono */
+  color: #fff; /* Color icono */
+  line-height: 0; /* Alineación vertical icono */
 }
 
 /* Estilos para el botón hover */
 .back-to-top:hover {
-  background: #fdc134; /* Color de fondo al pasar el cursor sobre él */
-  color: #fff; /* Color del texto al pasar el cursor sobre él */
+  background: #fdc134; /* Color boton */
+  color: #fff; /* Color texto  */
 }
 
 /* Estilos para el botón cuando está activo (visible) */
@@ -174,12 +171,13 @@ h1,h2,h3,h4,h5,h6 {
   padding: 0; /* Relleno */
 }
 
+/* Seccion suscribirse */
 .footer .footer-top .footer-newsletter {
   text-align: center; /* Alinear al centro */
   font-size: 15px; /* Tamaño del texto */
   margin-top: 30px; /* Margen superior */
 }
-
+/* formulario email */
 .footer .footer-top .footer-newsletter form {
   background: #fff; /* Color de fondo */
   padding: 6px 10px; /* Relleno */
@@ -189,12 +187,14 @@ h1,h2,h3,h4,h5,h6 {
   text-align: left; /* Alinear a la izquierda */
 }
 
+/* Ingresar email */
 .footer .footer-top .footer-newsletter form input[type=email] {
   border: 0; /* Borde */
   padding: 4px 8px; /* Relleno */
   width: calc(100% - 100px); /* Ancho calculado */
 }
 
+/* boton suscribirse */
 .footer .footer-top .footer-newsletter form input[type=submit] {
   position: absolute; /* Posición absoluta */
   top: 0; /* Posición desde arriba */
@@ -215,10 +215,12 @@ h1,h2,h3,h4,h5,h6 {
   background: #fcb102; /* Color de fondo al pasar el mouse */
 }
 
+/* icono WS y instagram */
 .footer .footer-top .social-links {
   margin-top: 30px; /* Margen superior */
 }
 
+/* Contorno WS y instagram */
 .footer .footer-top .social-links a {
   font-size: 18px; /* Tamaño del texto */
   display: inline-block; /* Mostrar como bloque en línea */
@@ -240,6 +242,7 @@ h1,h2,h3,h4,h5,h6 {
   text-decoration: none; /* Sin decoración de texto */
 }
 
+/* Barra final */
 .footer .footer-bottom {
   border-top: 1px solid #1a2e40; /* Borde superior */
   z-index: 2; /* Índice z */
@@ -248,11 +251,13 @@ h1,h2,h3,h4,h5,h6 {
   padding-bottom: 40px; /* Relleno inferior */
 }
 
+/* Copyright */
 .footer .copyright {
   text-align: center; /* Alinear al centro */
   float: left; /* Flotar a la izquierda */
 }
 
+/* credito */
 .footer .credits {
   float: right; /* Flotar a la derecha */
   text-align: center; /* Alinear al centro */
