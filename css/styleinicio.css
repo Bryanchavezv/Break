@@ -1,40 +1,17 @@
-<<<<<<< HEAD
-/*--------------- Navbar ------------------*/
-
-/* Barra lateral */
-=======
 body {
   background-color: #f0f2f5;
 }
->>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
-<<<<<<< HEAD
-
-/* Posicion links */
-.navbar-nav {
-  width: 200px; /* Ancho  navbar */
-  position: fixed; /* Fija navbar */
-  top: 150px; /* distancia parte superior */
-  bottom: 0; /* distancia desde la parte inferior */
-}
-
-/* Links  */
-.nav-link {
-  text-decoration: none; /* Sin subrayar */
-  color: white; /* Color enlace */
-  padding: 10px 20px; /* Espacios enlaces */
-=======
 .content {
   margin-top: 70px; /* Ajusta este valor según la altura de la barra de navegación */
 }
 .sidebar, .main-content {
   min-height: 100vh; /* Ajusta la altura según tus necesidades */
->>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
 }
 .sidebar {
   background-color: white;
