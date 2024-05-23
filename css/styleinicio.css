@@ -1,15 +1,19 @@
+<<<<<<< HEAD
 /*--------------- Navbar ------------------*/
 
 /* Barra lateral */
-.navbar {
-  position: fixed; /* Fija navbar  */
-  top: 0; /* distancia parte superior  */
-  left: 0; /* distancia desde el borde izquierdo  */
-  bottom: 0; /* distancia desde la parte inferior  */
-  width: 215px; /* Ancho navbar */
-  padding-top: 20px; /* Espacio parte superior navbar */
-  background-color: #333; /* fondo navbar */
+=======
+body {
+  background-color: #f0f2f5;
 }
+>>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+<<<<<<< HEAD
 
 /* Posicion links */
 .navbar-nav {
@@ -24,38 +28,26 @@
   text-decoration: none; /* Sin subrayar */
   color: white; /* Color enlace */
   padding: 10px 20px; /* Espacios enlaces */
+=======
+.content {
+  margin-top: 70px; /* Ajusta este valor según la altura de la barra de navegación */
 }
-
-/*--------------- Tarjetas ------------------*/
-.container {
-  margin-left: 400px; /* Espacio a la izq del contenedor */
+.sidebar, .main-content {
+  min-height: 100vh; /* Ajusta la altura según tus necesidades */
+>>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
 }
-
-.custom-card-img {
-  height: 250px; /* Altura imagen en las tarjetas */
-  object-fit: cover; /* Cubre el contenedor */
+.sidebar {
+  background-color: white;
+  border-right: 1px solid #ddd;
+  padding: 20px;
 }
-
-a {
-  text-decoration: none; /* Sin subrayar */
+.main-content {
+  padding: 20px;
 }
-
-/*--------------- Pie de pagina------------------*/
-.copyright {
-  position: absolute; /* Posición absoluta */
-  bottom: 0; /* Fijar parte inferior */
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-40%); /* Ajustar centro horizontal */
-  width: 100%; /* Ocupa todo el ancho */
-  text-align: center; /* Alinea al centro */
-}
-
-.credits {
-  position: absolute; /* Posición absoluta  */
-  bottom: 20px; /* Fijar y ajustar parte inferior  */
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-40%); /* Ajustar al centro horizontal */
-  width: 100%; /* Ocupa todo el ancho */
-  text-align: center; /* Alinea al centro */
-  font-size: 13px; /* Tamaño de letra */
+.post-section, .comment-section, .suggestions-section, .trending-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }

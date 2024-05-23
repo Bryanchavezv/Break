@@ -8,21 +8,29 @@
 
   <!-- Icono de sitio -->
   <link href="assets/img/favicon.png" rel="icon">
+ 
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Archivos externos CSS Files -->
+<<<<<<< HEAD
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet"> <!-- Animacion del inicio -->
+=======
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">  <!-- Animacion del inicio -->
+>>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
+
+
+
   <!-- Llama a hoja de estilo -->
   <link href="../css/styleinicio.css" rel="stylesheet">
 </head>
-
 <body>
+<<<<<<< HEAD
   <!-- Navbar lateral izquierdo -->
   <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
@@ -39,10 +47,34 @@
         <li class="nav-item">
           <a class="nav-link" href="proximamente.html"><i class="fas fa-envelope"></i>Ventas</a>
         </li>
-      </ul>
-    </div>
-  </nav>
+=======
 
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end"> <!-- Añade la clase justify-content-end aquí -->
+  <a class="navbar-brand" href="#">Break</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav"> <!-- Elimina ml-auto aquí -->
+          <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Perfil</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Configuración</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Cerrar sesión</a>
+          </li>
+>>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
+      </ul>
+  </div>
+</nav>
+
+<<<<<<< HEAD
   <!-- Contenedor para las tarjetas -->
   <div class="container">
     <div class="row">
@@ -72,8 +104,136 @@
         </a>
       </div>
     </div>
+=======
+
+
+<!-- Contenido principal -->
+<div class="container-fluid content">
+  <div class="row">
+      <!-- Barra lateral izquierda -->
+      <div class="col-md-3 sidebar">
+          <div class="profile-section">
+              <h5>Mi Perfil</h5>
+              <img src="https://via.placeholder.com/80" class="rounded-circle mb-3" alt="Foto de perfil">
+              <p><strong>Nombre de Usuario</strong></p>
+              <p><a href="#">Ver perfil</a></p>
+              <hr>
+              <h6>Enlaces rápidos</h6>
+              <ul class="list-unstyled">
+                  <li><a href="#">Amigos</a></li>
+                  <li><a href="#">Grupos</a></li>
+                  <li><a href="#">Eventos</a></li>
+                  <li><a href="#">Mensajes</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Área de publicaciones -->
+      <div class="col-md-6 main-content">
+          <!-- Publicar nueva actualización -->
+          <div class="post-section">
+              <h5>¿Qué estás pensando?</h5>
+              <form>
+                  <div class="form-group">
+                      <textarea class="form-control" rows="3" placeholder="Escribe algo..."></textarea>
+                  </div><br>
+                  <button type="submit" class="btn btn-primary">Publicar</button>
+              </form>
+          </div>
+
+          <!-- Feed de publicaciones -->
+          <div class="feed">
+            <!-- Aquí van las publicaciones -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="media">
+                        <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                        <div class="media-body">
+                            <h5 class="card-title">Usuario1</h5>
+                            <p class="card-text">Esta es una publicación de ejemplo.</p>
+                            <p class="card-text"><small class="text-muted">Hace 10 minutos</small></p>
+                            <!-- Sección de comentarios -->
+                            <div class="comment-section">
+                                <h6>Comentarios</h6>
+                                <div class="media mb-3">
+                                    <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                                    <div class="media-body">
+                                        <h6 class="mt-0">UsuarioA</h6>
+                                        ¡Qué interesante publicación!
+                                    </div>
+                                </div>
+                                <!-- Formulario para agregar comentario -->
+                                <form>
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="2" placeholder="Escribe un comentario..."></textarea>
+                                    </div><br>
+                                    <button type="submit" class="btn btn-secondary">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Otra publicación -->
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <h5 class="card-title">Usuario2</h5>
+                      <p class="card-text">Otra publicación de ejemplo.</p>
+                      <p class="card-text"><small class="text-muted">Hace 30 minutos</small></p>
+                      <!-- Sección de comentarios -->
+                      <div class="comment-section">
+                          <h6>Comentarios</h6>
+                          <div class="media mb-3">
+                              <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                              <div class="media-body">
+                                  <h6 class="mt-0">UsuarioB</h6>
+                                  Muy buena información, gracias por compartir.
+                              </div>
+                          </div>
+                          <!-- Formulario para agregar comentario -->
+                          <form>
+                              <div class="form-group">
+                                  <textarea class="form-control" rows="2" placeholder="Escribe un comentario..."></textarea>
+                              </div><br>
+                              <button type="submit" class="btn btn-secondary">Comentar</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Puedes añadir más publicaciones aquí -->
+          </div>
+      </div>
+
+      <!-- Barra lateral derecha -->
+      <div class="col-md-3 sidebar">
+          <!-- Aquí van las sugerencias y tendencias -->
+          <div class="suggestions-section">
+              <h5>Sugerencias de amigos</h5>
+              <div class="media mb-3">
+                  <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                  <div class="media-body">
+                      <h6 class="mt-0">UsuarioSugerido1</h6>
+                      <button class="btn btn-primary btn-sm">Agregar amigo</button>
+                  </div>
+              </div>
+              <!-- Más sugerencias -->
+          </div>
+
+          <div class="trending-section">
+              <h5>Tendencias</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#">#Tendencia1</a></li>
+                  <li><a href="#">#Tendencia2</a></li>
+                  <!-- Más tendencias -->
+              </ul>
+          </div>
+      </div>
+>>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
   </div>
 
+<<<<<<< HEAD
   <!-- Copyright y Créditos -->
   <div class="container-fluid footer-bottom clearfix">
     <div class="copyright">
@@ -88,6 +248,11 @@
   <script src="../assets/vendor/aos/aos.js"></script>
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+=======
+<!-- Scripts de Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+>>>>>>> 73e15befda3e73df95cccdc5146dc173e9382e3b
 </body>
-
 </html>
