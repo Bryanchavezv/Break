@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break - Google Drive</title>
+    <style>
+        /* Estilos para la interfaz de usuario */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botones de acción -->
+    <button class="button" onclick="uploadFile()">Subir Archivo</button>
+    <button class="button" onclick="shareFile()">Compartir Archivo</button>
+    <button class="button" onclick="downloadFile()">Descargar Archivo</button>
+
+    <!-- Contenedor para la lista de archivos -->
+    <div id="fileList"></div>
+
+    <!-- Scripts de la API de Google Drive -->
+    <script src="https://apis.google.com/js/api.js?onload=gapiLoaded"></script>
+    <script>
+        // Variables globales
+        let accessToken;
+
+        // Función para cargar la API de Google Drive
+        function gapiLoaded() {
+            // API Key y Client ID de tu cuenta
+            const CLIENT_ID = '84594609583-ha33co75pegiprbrapsil1u8bml4d0i9.apps.googleusercontent.com';
+            const API_KEY = 'AIzaSyCG5D-HEBAmK1lR8VRazG99Ta8OuyfSmD0';
+
+            // Discovery doc URL para las APIs usadas por el quickstart
+            const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
+
+            // Scopes de autorización requeridos por la API
+            const SCOPES = 'https://www.googleapis.com/auth/drive';
+
+            // Inicializar cliente API
+            gapi.client.init({
+                apiKey: API_KEY,
+                clientId: CLIENT_ID,
+                discoveryDocs: [DISCOVERY_DOC],
+                scope: SCOPES
+            }).then(function () {
+                console.log('Google Drive API loaded successfully');
+                // Verificar el estado de la autenticación
+                gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
+                // Manejar el estado de la autenticación inicial
+                updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+            }, function (error) {
+                console.error('Error loading Google Drive API:', error);
+            });
+
+            // Actualizar el estado de inicio de sesión
+            function updateSignInStatus(isSignedIn) {
+                if (isSignedIn) {
+                    // Usuario autenticado
+                    accessToken = gapi.auth.getToken().access_token;
+                    // Obtener y mostrar la lista de archivos
+                    listFiles();
+                } else {
+                    // Usuario no autenticado
+                    accessToken = null;
+                }
+            }
+        }
+
+        // Función para subir un archivo
+        function uploadFile() {
+            // Implementa la lógica para subir un archivo a Google Drive aquí
+        }
+
+        // Función para compartir un archivo
+        function shareFile() {
+            // Implementa la lógica para compartir un archivo de Google Drive aquí
+        }
+
+        // Función para descargar un archivo
+        function downloadFile() {
+            // Implementa la lógica para descargar un archivo de Google Drive aquí
+        }
+
+        // Función para obtener la lista de archivos del usuario y mostrarlos en el contenedor
+        function listFiles() {
+            // Implementa la lógica para obtener la lista de archivos de Google Drive aquí
+        }
+    </script>
+</body>
+</html>
