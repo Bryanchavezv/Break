@@ -1,60 +1,78 @@
-/*------------------------------------------------*/
-/* Configuración general */
-/*------------------------------------------------*/
-
 /* Estilos para los enlaces */
 a {
-  color: #fdc134; /* Color de los enlaces */
-  text-decoration: none; /* Sin subrayado por defecto */
+  color: #fdc134; /* Color enlace */
+  text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos para los enlaces cuando se pasan por encima */
+/* Estilos para los enlaces hover */
 a:hover {
-  color: #fdd067; /* Color del enlace al pasar el cursor sobre él */
-  text-decoration: none; /* Sin subrayado al pasar el cursor sobre él */
+  color: #fdd067; /* Color enlace */
+  text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilos para los títulos (h1, h2, h3, h4, h5, h6) */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Estilos para los títulos */
+h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway", sans-serif; /* Fuente para los títulos */
 }
 
-/*------------------------------------------------*/
-/* Botón de volver arriba .Clase */
-/*------------------------------------------------*/
+/* Carousel */
+.d-item {
+  height: 500px; /* Altura carrusel */
+  
+}
+
+.d-img {
+  height: 100%; /* Altura imagen dentro carrusel */
+  object-fit: cover; /* Tamaño y recorte para cubrir el contenedor */
+  filter: brightness(0.6); /* Brillo de la imagen para oscurecerla */
+}
+
+/* Boton contactanos */
+.btn-get-started {
+  color: #213b52; /* Color del texto */
+  border-radius: 50px; /* Borde redondo */
+  padding: 8px 35px 10px 35px; /* Relleno */
+  border: 2px solid #fdc134; /* Borde */
+  transition: all ease-in-out 0.3s; /* Transición suave */
+  display: inline-block; /* Mostrar como bloque */
+  background: #fdc134; /* Color de fondo */
+}
+
+.btn-get-started:hover {
+  background: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto */
+}
+
+
+
+/*--------------- Botón de volver arriba ------------------*/
 
 /* Estilos para el botón de volver arriba */
 .back-to-top {
-  position: fixed; /* Posición fija en la ventana del navegador */
+  position: fixed; /* Posición fija */
   visibility: hidden; /* Inicialmente no visible */
   opacity: 0; /* Opacidad inicial */
   right: 15px; /* Posición a la derecha */
   bottom: 15px; /* Posición en la parte inferior */
-  z-index: 99999; /* Z-index para superponer sobre otros elementos */
-  background: #fdc134; /* Color de fondo del botón */
-  width: 40px; /* Ancho del botón */
-  height: 40px; /* Altura del botón */
-  border-radius: 50px; /* Borde redondeado */
+  z-index: 99999; /* Superponer */
+  background: #fdc134; /* Color botón */
+  width: 40px; /* Ancho botón */
+  height: 40px; /* Altura botón */
+  border-radius: 50px; /* Borde redondo */
   transition: all 0.4s; /* Transición suave */
-  display: none; /* Ocultar inicialmente */
 }
 
 /* Icono dentro del botón */
 .back-to-top i {
-  font-size: 24px; /* Tamaño del icono */
-  color: #fff; /* Color del icono */
-  line-height: 0; /* Alineación vertical del icono */
+  font-size: 24px; /* Tamaño icono */
+  color: #fff; /* Color icono */
+  line-height: 0; /* Alineación vertical icono */
 }
 
-/* Estilos para el botón al pasar el cursor sobre él */
+/* Estilos para el botón hover */
 .back-to-top:hover {
-  background: #fdc134; /* Color de fondo al pasar el cursor sobre él */
-  color: #fff; /* Color del texto al pasar el cursor sobre él */
+  background: #fdc134; /* Color boton */
+  color: #fff; /* Color texto  */
 }
 
 /* Estilos para el botón cuando está activo (visible) */
@@ -64,17 +82,17 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
-# Sección del Inicio .ID
---------------------------------------------------------------*/
-#inicio {
+/*--------------- Sección del Inicio ------------------*/
+
+/* Fondo inicio */
+.inicio {
   width: 100%; /* Ancho completo */
   padding: 0 0 0 0; /* Relleno */
   background: #213b52; /* Color de fondo */
   background: linear-gradient(180deg, #213b52 0%, rgb(33, 60, 84) 35%, rgb(32, 69, 100) 100%); /* Degradado lineal */
 }
 
-#inicio h1 {
+.inicio h1 {
   margin: 0 0 15px 0; /* Margen */
   font-size: 48px; /* Tamaño del texto */
   font-weight: 700; /* Grosor del texto */
@@ -83,15 +101,16 @@ h6 {
   font-family: "Poppins", sans-serif; /* Familia de fuente */
 }
 
-#inicio h2 {
+.inicio h2 {
   color: #fff; /* Color del texto */
   margin-bottom: 30px; /* Margen inferior */
   font-size: 22px; /* Tamaño del texto */
 }
 
-#inicio .btn-get-started {
+/* Boton comencemos */
+.inicio .btn-get-started {
   color: #213b52; /* Color del texto */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   padding: 8px 35px 10px 35px; /* Relleno */
   border: 2px solid #fdc134; /* Borde */
   transition: all ease-in-out 0.3s; /* Transición suave */
@@ -99,102 +118,25 @@ h6 {
   background: #fdc134; /* Color de fondo */
 }
 
-#inicio .btn-get-started:hover {
+.inicio .btn-get-started:hover {
   background: transparent; /* Fondo transparente */
   color: #fff; /* Color del texto */
 }
 
 
-  #inicio .inicio-img img {
-    width: 80%; 
-  }
+
+/*--------------- Footer - Final ------------------*/
 
 
-
-
-  #inicio h1 {
-    font-size: 28px; /* Tamaño del texto */
-    line-height: 36px; /* Altura de línea */
-  }
-
-  #inicio h2 {
-    font-size: 18px; /* Tamaño del texto */
-    line-height: 24px; /* Altura de línea */
-    margin-bottom: 30px; /* Margen inferior */
-  }
-
-  #inicio .inicio-img img {
-    width: 300%; 
-  }
-
-
-
-/*--------------------------------------------------------------
-# Secciones generales
---------------------------------------------------------------*/
-section {
-  padding: 60px 0; /* Relleno */
-  overflow: hidden; /* Ocultar desbordamiento */
-}
-
-.section-bg {
-  background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%); /* Degradado lineal */
-}
-
-.section-title {
-  text-align: center; /* Alinear al centro */
-  padding-bottom: 40px; /* Relleno inferior */
-}
-
-.section-title h2 {
-  font-size: 32px; /* Tamaño del texto */
-  font-weight: 600; /* Grosor del texto */
-  text-transform: uppercase; /* Transformación de texto en mayúsculas */
-  margin-bottom: 20px; /* Margen inferior */
-  padding-bottom: 20px; /* Relleno inferior */
-  position: relative; /* Posición relativa */
-  font-family: "Poppins", sans-serif; /* Familia de fuente */
-  color: #213b52; /* Color del texto */
-}
-
-.section-title h2::before {
-  content: ""; /* Contenido vacío */
-  position: absolute; /* Posición absoluta */
-  display: block; /* Mostrar como bloque */
-  width: 120px; /* Ancho */
-  height: 1px; /* Altura */
-  background: #ddd; /* Color de fondo */
-  bottom: 1px; /* Posición desde la parte inferior */
-  left: calc(50% - 60px); /* Posición a la izquierda */
-}
-
-.section-title h2::after {
-  content: ""; /* Contenido vacío */
-  position: absolute; /* Posición absoluta */
-  display: block; /* Mostrar como bloque */
-  width: 40px; /* Ancho */
-  height: 3px; /* Altura */
-  background: #fdc134; /* Color de fondo */
-  bottom: 0; /* Posición desde la parte inferior */
-  left: calc(50% - 20px); /* Posición a la izquierda */
-}
-
-.section-title p {
-  margin-bottom: 0; /* Margen inferior */
-}
-
-
-/*--------------------------------------------------------------
-# Footer - Final
---------------------------------------------------------------*/
-#footer {
+.footer {
   background: url("../assets/img/footer-bg.jpg") center center no-repeat; /* Imagen de fondo centrada */
   color: #fff; /* Color del texto */
   font-size: 14px; /* Tamaño del texto */
   position: relative; /* Posición relativa */
 }
 
-#footer::before {
+/*color a la imagen final*/
+.footer::before {
   content: ""; /* Contenido vacío */
   position: absolute; /* Posición absoluta */
   left: 0; /* Posición desde la izquierda */
@@ -205,14 +147,14 @@ section {
   z-index: 1; /* Índice z */
 }
 
-#footer .footer-top {
+.footer .footer-top {
   position: relative; /* Posición relativa */
   z-index: 2; /* Índice z */
   text-align: center; /* Alinear al centro */
   padding: 80px 0; /* Relleno */
 }
 
-#footer .footer-top h3 {
+.footer .footer-top h3 {
   font-size: 36px; /* Tamaño del texto */
   font-weight: 700; /* Grosor del texto */
   color: #fff; /* Color del texto */
@@ -222,35 +164,38 @@ section {
   margin-bottom: 0; /* Margen inferior */
 }
 
-#footer .footer-top p {
+.footer .footer-top p {
   font-size: 15; /* Tamaño del texto */
   font-style: italic; /* Estilo del texto */
   margin: 30px 0 0 0; /* Margen */
   padding: 0; /* Relleno */
 }
 
-#footer .footer-top .footer-newsletter {
+/* Seccion suscribirse */
+.footer .footer-top .footer-newsletter {
   text-align: center; /* Alinear al centro */
   font-size: 15px; /* Tamaño del texto */
   margin-top: 30px; /* Margen superior */
 }
-
-#footer .footer-top .footer-newsletter form {
+/* formulario email */
+.footer .footer-top .footer-newsletter form {
   background: #fff; /* Color de fondo */
   padding: 6px 10px; /* Relleno */
   position: relative; /* Posición relativa */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
   text-align: left; /* Alinear a la izquierda */
 }
 
-#footer .footer-top .footer-newsletter form input[type=email] {
+/* Ingresar email */
+.footer .footer-top .footer-newsletter form input[type=email] {
   border: 0; /* Borde */
   padding: 4px 8px; /* Relleno */
   width: calc(100% - 100px); /* Ancho calculado */
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit] {
+/* boton suscribirse */
+.footer .footer-top .footer-newsletter form input[type=submit] {
   position: absolute; /* Posición absoluta */
   top: 0; /* Posición desde arriba */
   right: -1px; /* Posición desde la derecha */
@@ -262,19 +207,21 @@ section {
   background: #fdc134; /* Color de fondo */
   color: #fff; /* Color del texto */
   transition: 0.3s; /* Transición */
-  border-radius: 50px; /* Borde redondeado */
+  border-radius: 50px; /* Borde redondo */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
+.footer .footer-top .footer-newsletter form input[type=submit]:hover {
   background: #fcb102; /* Color de fondo al pasar el mouse */
 }
 
-#footer .footer-top .social-links {
+/* icono WS y instagram */
+.footer .footer-top .social-links {
   margin-top: 30px; /* Margen superior */
 }
 
-#footer .footer-top .social-links a {
+/* Contorno WS y instagram */
+.footer .footer-top .social-links a {
   font-size: 18px; /* Tamaño del texto */
   display: inline-block; /* Mostrar como bloque en línea */
   background: #284864; /* Color de fondo */
@@ -282,20 +229,21 @@ section {
   line-height: 1; /* Altura de línea */
   padding: 8px 0; /* Relleno */
   margin-right: 4px; /* Margen derecho */
-  border-radius: 50%; /* Borde redondeado */
+  border-radius: 50%; /* Borde redondo */
   text-align: center; /* Alinear al centro */
   width: 36px; /* Ancho */
   height: 36px; /* Altura */
   transition: 0.3s; /* Transición */
 }
 
-#footer .footer-top .social-links a:hover {
+.footer .footer-top .social-links a:hover {
   background: #fcb102; /* Color de fondo al pasar el mouse */
   color: #fff; /* Color del texto */
   text-decoration: none; /* Sin decoración de texto */
 }
 
-#footer .footer-bottom {
+/* Barra final */
+.footer .footer-bottom {
   border-top: 1px solid #1a2e40; /* Borde superior */
   z-index: 2; /* Índice z */
   position: relative; /* Posición relativa */
@@ -303,13 +251,17 @@ section {
   padding-bottom: 40px; /* Relleno inferior */
 }
 
-#footer .copyright {
+/* Copyright */
+.footer .copyright {
   text-align: center; /* Alinear al centro */
   float: left; /* Flotar a la izquierda */
 }
 
-#footer .credits {
+/* credito */
+.footer .credits {
   float: right; /* Flotar a la derecha */
   text-align: center; /* Alinear al centro */
   font-size: 13px; /* Tamaño del texto */
 }
+
+

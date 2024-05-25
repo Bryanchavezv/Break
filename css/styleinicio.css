@@ -1,0 +1,68 @@
+/*--------------- Configuracion general ------------------*/
+body {
+  background-image: url('../assets/img/Diseno-sin-titulo-1.png'); /* Imagen de fondo pagina */
+}
+
+/* Enlaces y lista */
+a, li {
+  color: #213b52; /* Color del texto de los enlaces y listas */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  font-family: Arial, sans-serif; /* Añade una fuente común */
+  font-weight: bold; /* Hace el texto en negrita */
+}
+
+
+a:hover {
+  color: #0056b3; /* Color al pasar el ratón */
+}
+
+
+.content {
+  margin-top: 70px; /* Altura de la barra de navegación */
+}
+
+/* Barra lateral y el contenido principal */
+.sidebar, .main-content {
+  min-height: 100vh; /* Ajusta la altura para que ocupe al menos la altura completa de la ventana */
+}
+
+/* Barra lateral */
+.sidebar {
+  background-color: white; /* Fondo blanco para la barra lateral */
+  border-right: 1px solid #ddd; /* Borde derecho gris claro */
+  padding: 20px; /* Espaciado interno de 20px */
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 20px; /* Espaciado interno de 20px */
+}
+
+/* Varias secciones dentro del contenido principal */
+.post-section, .comment-section, .suggestions-section, .trending-section {
+  background-color: white; /* Fondo blanco para cada sección */
+  padding: 20px; /* Espaciado interno de 20px */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  margin-bottom: 20px; /* Margen inferior de 20px para separación entre secciones */
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: #213b52; /* Color de fondo */
+}
+
+
+.btn-primary:hover {
+  background-color: #fdc134; /* Color al pasar el ratón */
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: #213b52; /* Color de fondo azul oscuro */
+}
+
+
+.btn-secondary:hover {
+  background-color: #fdc134; /* Colorcal pasar el ratón */
+}

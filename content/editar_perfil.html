@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <!-- Icono de sitio -->
+     <link href="../assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Archivos CSS Files -->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet"> <!-- Animacion del inicio -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+ 
+
+  <!-- Llama a hoja de estilo -->
+    <link href="../css/stylelogin.css" rel="stylesheet">
+
+    <link href="../css/stylenav.css" rel="stylesheet">
+    <link href="../css/styleperfil.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end">
+        <a class="navbar-brand" href="./inicio.html">
+            <img src="../assets/img/Logo 3.png" alt="Marca" style="height: 140px; width: 150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./inicio.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-person"></i> Perfil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-gear"></i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <i class="bi bi-door-closed"></i> Cerrar sesión
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulario -->
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center align-items-center" style="height: calc(100vh - 50px);">
+            <div class="mb-5">
+                <h1 class="titulo">Editar Perfil</h1>
+                <form id="perfilForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required
+                            data-error="Por favor, ingresa tu nombre completo">
+                        <div class="invalid-feedback">Este campo es requerido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rut" class="form-label">RUT:</label>
+                        <input type="text" class="form-control" id="rut" name="rut" required
+                            data-error="Por favor, ingresa tu RUT">
+                        <div class="invalid-feedback">Este campo es requerido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required
+                            data-error="Por favor, ingresa tu teléfono">
+                        <div class="invalid-feedback">Este campo es requerido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo_usuario" class="form-label">Tipo de Usuario:</label>
+                        <select class="form-select" id="tipo_usuario" name="tipo_usuario" required>
+                            <option value="">Selecciona un tipo de usuario</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="docente">Docente</option>
+                        </select>
+                        <div class="invalid-feedback">Este campo es requerido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carrera" class="form-label">Carrera:</label>
+                        <input type="text" class="form-control" id="carrera" name="carrera">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="guardarCambios">Guardar Cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de éxito -->
+    <div class="modal fade" id="exitoModal" tabindex="-1" aria-labelledby="exitoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-check-circle-fill text-success mb-3" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm4.354 5.354a.5.5 0 0 0-.708-.708L7 9.293 5.354 7.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4z" />
+                    </svg>
+                    <p>Has realizado el cambio exitosamente de tu perfil</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de error -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-x-circle-fill text-danger mb-3" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm4.354 5.354a.5.5 0 0 0-.708-.708L7 9.293 5.354 7.646a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4z" />
+                    </svg>
+                    <p>Completa todos los campos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Modal validacion campos -->
+<script>
+    $(document).ready(function () {
+        $('#guardarCambios').click(function () {
+            if ($("#perfilForm")[0].checkValidity() === false) {
+                $('#errorModal').modal('show');
+            } else {
+                $('#exitoModal').modal('show');
+            }
+            $('#perfilForm').addClass('was-validated');
+        });
+    });
+</script>
+
+</body>
+</html>
