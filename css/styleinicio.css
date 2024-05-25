@@ -1,141 +1,68 @@
+/*--------------- Configuracion general ------------------*/
 body {
-  background-color: #f0f2f5;
+  background-image: url('../assets/img/Diseno-sin-titulo-1.png'); /* Imagen de fondo pagina */
 }
 
+/* Enlaces y lista */
 a, li {
-  color: #213b52;
+  color: #213b52; /* Color del texto de los enlaces y listas */
   text-decoration: none; /* Quita el subrayado de los enlaces */
   font-family: Arial, sans-serif; /* Añade una fuente común */
   font-weight: bold; /* Hace el texto en negrita */
 }
+
+
 a:hover {
-  color: #0056b3; /* Cambia el color al pasar el ratón */
+  color: #0056b3; /* Color al pasar el ratón */
 }
+
 
 .content {
-  margin-top: 70px; /* Ajusta este valor según la altura de la barra de navegación */
+  margin-top: 70px; /* Altura de la barra de navegación */
 }
+
+/* Barra lateral y el contenido principal */
 .sidebar, .main-content {
-  min-height: 100vh; /* Ajusta la altura según tus necesidades */
+  min-height: 100vh; /* Ajusta la altura para que ocupe al menos la altura completa de la ventana */
 }
+
+/* Barra lateral */
 .sidebar {
-  background-color: white;
-  border-right: 1px solid #ddd;
-  padding: 20px;
+  background-color: white; /* Fondo blanco para la barra lateral */
+  border-right: 1px solid #ddd; /* Borde derecho gris claro */
+  padding: 20px; /* Espaciado interno de 20px */
 }
+
+/* Contenido principal */
 .main-content {
-  padding: 20px;
+  padding: 20px; /* Espaciado interno de 20px */
 }
+
+/* Varias secciones dentro del contenido principal */
 .post-section, .comment-section, .suggestions-section, .trending-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  background-color: white; /* Fondo blanco para cada sección */
+  padding: 20px; /* Espaciado interno de 20px */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  margin-bottom: 20px; /* Margen inferior de 20px para separación entre secciones */
 }
 
-.btn-primary{
-  background-color: #213b52;
-  
-}
-.btn-primary:hover{
-  background-color: #fdc134;
-  
-}
-
-.btn-secondary{
-  background-color: #213b52;
-}
-
-.btn-secondary:hover{
-  background-color: #fdc134;
-  
-}
-
-
-/* Estilos generales */
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f8f9fa;
-}
-
-/* Barra de navegación */
-.navbar {
-  padding: 20px;
-}
-
-.navbar-brand img {
-  height: 50px;
-}
-
-/* Tarjeta de edición de perfil */
-.card {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 15px 15px 0 0;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  padding: 15px 0;
-}
-
-.card-body {
-  padding: 30px;
-}
-
-/* Estilos para el formulario */
-.form-group label {
-  font-weight: bold;
-  color: #333;
-}
-
-.form-control {
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  border-color: #007bff;
-}
-
+/* Botón primario */
 .btn-primary {
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  font-weight: bold;
+  background-color: #213b52; /* Color de fondo */
 }
+
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: #fdc134; /* Color al pasar el ratón */
 }
 
-.container {
-  margin-top: 50px;
+/* Botón secundario */
+.btn-secondary {
+  background-color: #213b52; /* Color de fondo azul oscuro */
 }
 
-footer {
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 50px;
-  background-color: #007bff;
-  color: #fff;
-}
 
-/* Media queries para responsividad */
-@media (max-width: 767.98px) {
-  .navbar-brand img {
-    height: 40px;
-  }
-
-  .card {
-    margin: 20px;
-  }
+.btn-secondary:hover {
+  background-color: #fdc134; /* Colorcal pasar el ratón */
 }

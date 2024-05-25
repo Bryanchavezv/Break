@@ -1,61 +1,76 @@
-/* Estilos personalizados */
-
+/*--------------- Tarjeta API ------------------*/
 .tarjeta {
-    width: 295px;
-    height: auto;
-    margin: -10 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    margin-left: -10px;
-    
+    width: 295px; /* Ancho de la tarjeta */
+    height: auto; /* Altura automática según el contenido */
+    margin: -10 auto; /* Márgenes superiores negativos y auto para centrar horizontalmente */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    margin-bottom: 20px; /* Margen inferior para separación */
+    margin-left: -10px; /* Margen izquierdo negativo */
 }
-.tarjeta i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-.titulotarjeta {
-    color: #007bff;
-    font-size: 1rem;
-    text-align: center;
-}
-.textotarjeta {
-    color: #333;
-    font-size: 0.8rem;
-    text-align: center;
-}
-.btn-sm {
-    background-color: #213b52;
-    font-size: 0.8rem;
 
+/* Iconos dentro de la tarjeta */
+.tarjeta i {
+    font-size: 2rem; /* Tamaño de fuente grande para los iconos */
+    color: #007bff; /* Color azul */
+    margin-bottom: 15px; /* Margen inferior para separación */
 }
+
+/* Título de la tarjeta */
+.titulotarjeta {
+    color: #007bff; /* Color azul */
+    font-size: 1rem; /* Tamaño de fuente del título */
+    text-align: center; /* Centrado del texto */
+}
+
+/* Texto de la tarjeta */
+.textotarjeta {
+    color: #333; /* Color gris oscuro */
+    font-size: 0.8rem; /* Tamaño de fuente del texto */
+    text-align: center; /* Centrado del texto */
+}
+
+/* Botones pequeños */
+.btn-sm {
+    background-color: #213b52; /* Fondo azul oscuro */
+    font-size: 0.8rem; /* Tamaño de fuente pequeño */
+}
+
+/* Sección de noticias dentro de la tarjeta */
 .tarjetanoticias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display: flex; /* Uso de flexbox para alineación */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Alineación centrada horizontalmente */
+    padding: 20px; /* Relleno interno */
 }
+
+/* Título de la noticia */
 .news-titulo {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #007bff;
+    margin-bottom: 10px; /* Margen inferior para separación */
+    text-align: center; /* Centrado del texto */
+    font-size: 1.5rem; /* Tamaño de fuente grande */
+    color: #007bff; /* Color azul */
 }
+
+/* Fecha de publicación */
 .fechapublicacion {
-    color: #666;
-    font-size: 0.8rem;
-    margin-top: 10px;
+    color: #666; /* Color gris claro */
+    font-size: 0.8rem; /* Tamaño de fuente pequeño */
+    margin-top: 10px; /* Margen superior para separación */
 }
+
+/* Información del autor */
 .autorinfo {
-    color: #666;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 10px;
+    color: #666; /* Color gris claro */
+    font-size: 0.8rem; /* Tamaño de fuente pequeño */
+    display: flex; /* Uso de flexbox para alineación */
+    align-items: center; /* Alineación vertical centrada */
+    justify-content: flex-end; /* Alineación horizontal a la derecha */
+    margin-top: 10px; /* Margen superior para separación */
 }
+
+/* Iconos dentro de la información del autor */
 .autorinfo i {
-    margin-right: 5px;
+    margin-right: 5px; /* Margen derecho para separación del texto */
 }

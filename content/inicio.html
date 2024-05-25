@@ -63,9 +63,9 @@
         <div class="col-md-3 sidebar">
             <div class="profile-section">
                 <h5>Mi Perfil</h5>
-                <img src="https://via.placeholder.com/80" class="rounded-circle mb-3" alt="Foto de perfil">
+                <img src="../assets/img/bart.png" class="mr-3 rounded-circle" alt="..." style="height: 100px; width: 100px;"
                 <p><strong>Nombre de Usuario</strong></p>
-                <p><a href="./editar_perfil.html">Ver perfil</a></p>
+                <p><a href="#">Ver perfil</a></p>
                 <hr>
                 <h6>Enlaces rápidos</h6>
                 <ul class="list-unstyled">
@@ -96,7 +96,7 @@
               <div class="card mb-3">
                   <div class="card-body">
                       <div class="media">
-                          <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                          <img src="../assets/img/homero.png" class="mr-3 rounded-circle" alt="..." style="height: 80px; width: 80px;">
                           <div class="media-body">
                               <h5 class="card-title">Usuario1</h5>
                               <p class="card-text">Esta es una publicación de ejemplo.</p>
@@ -105,7 +105,7 @@
                               <div class="comment-section">
                                   <h6>Comentarios</h6>
                                   <div class="media mb-3">
-                                      <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                                      <img src="../assets/img/bender.jpg" class="mr-3 rounded-circle" alt="..."style="height: 80px; width: 80px;">
                                       <div class="media-body">
                                           <h6 class="mt-0">UsuarioA</h6>
                                           ¡Qué interesante publicación!
@@ -134,7 +134,8 @@
               <div class="comment-section">
                 <h6>Comentarios</h6>
                 <div class="media mb-3">
-                  <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                  <img src="../assets/img/Plakton.jpg" class="mr-3 rounded-circle" alt="..." style="height: 100px; width: 80px;">
+                  <div class="media-body">
                   <div class="media-body">
                     <h6 class="mt-0">UsuarioB</h6>
                     Muy buena información, gracias por compartir.
@@ -160,21 +161,20 @@
   <div class="suggestions-section">
       <h5>Sugerencias de amigos</h5>
       <div class="media mb-3">
-          <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+          <img src="../assets/img/Doofsmit.jpg" class="mr-3 rounded-circle" alt="..." style="height: 100px; width: 80px;">
           <div class="media-body">
               <h6 class="mt-0">UsuarioSugerido1</h6>
               <button class="btn btn-primary btn-sm">Agregar amigo</button>
           </div>
       </div>
-      <!-- Más sugerencias -->
   </div>
 
+  <!-- Tendencias -->
   <div class="trending-section">
       <h5>Tendencias</h5>
       <ul class="list-unstyled">
           <li><a href="#">#Tendencia1</a></li>
           <li><a href="#">#Tendencia2</a></li>
-          <!-- Más tendencias -->
       </ul>
   </div>
 
@@ -196,10 +196,14 @@
 
 </div>
 
-  <!-- Scripts de Bootstrap y jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../assets/vendor/aos/aos.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/validacion.js"></script>
+<script src="../assets/js/api.js"></script>
+
 
   <script>
   $(document).ready(function() {
@@ -216,12 +220,12 @@
         }
       });
 
-      // Desplegable animado en la barra de navegación
+      // Menu celular
       $('.navbar-toggler').on('click', function() {
         $('#navbarNav').slideToggle();
       });
 
-      // Publicar actualización sin recargar la página
+      // Que estoy pensando, sin recargar la página
       $('.post-section form').on('submit', function(event) {
         event.preventDefault();
         var postContent = $(this).find('textarea').val();
@@ -230,7 +234,7 @@
             <div class="card mb-3">
               <div class="card-body">
                 <div class="media">
-                  <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+                  <img src="../assets/img/bart.png" class="mr-3 rounded-circle" alt="..." style="height: 80px; width: 80px;">
                   <div class="media-body">
                     <h5 class="card-title">Tu Nombre</h5>
                     <p class="card-text">` + postContent + `</p>
@@ -253,14 +257,14 @@
         }
       });
 
-      // Añadir un comentario con efecto de animación
+      // Añadir un comentario con efecto animado
       $(document).on('submit', '.comment-section form', function(event) {
         event.preventDefault();
         var commentContent = $(this).find('textarea').val();
         if (commentContent) {
           var newComment = `
             <div class="media mb-3">
-              <img src="https://via.placeholder.com/40" class="mr-3 rounded-circle" alt="...">
+              <img src="../assets/img/homero.png" class="mr-3 rounded-circle" alt="..." style="height: 80px; width: 80px;">
               <div class="media-body">
                 <h6 class="mt-0">Tu Nombre</h6>
                 ` + commentContent + `
@@ -273,62 +277,7 @@
       });
     });
 
-    // Función para hacer la solicitud a la API de noticias
-    function fetchNews() {
-            const apiKey = "f0b00ca53b6e46cda812db9aef58b5d8";
-            const url = `https://newsapi.org/v2/top-headlines?country=mx&apiKey=${apiKey}`;
-
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    const newsTitle = document.getElementById("news-title");
-                    const newsDescription = document.getElementById("news-description");
-                    const newsLink = document.getElementById("news-link");
-                    const publishedAt = document.getElementById("published-at");
-                    const sourceInfo = document.getElementById("source-info");
-
-                    // Mostrar la primera noticia
-                    displayNews(data.articles[0]);
-
-                    // Actualizar las noticias en un intervalo
-                    let index = 1;
-                    setInterval(() => {
-                        if (index >= data.articles.length) {
-                            index = 0;
-                        }
-                        displayNews(data.articles[index]);
-                        index++;
-                    }, 3000); // Cambiar cada 3 segundos
-                })
-                .catch(error => {
-                    console.error("Error al obtener las noticias:", error);
-                });
-        }
-
-        // Función para mostrar las noticias en una card
-        function displayNews(article) {
-            const newsTitle = document.getElementById("news-title");
-            const newsDescription = document.getElementById("news-description");
-            const newsLink = document.getElementById("news-link");
-            const publishedAt = document.getElementById("published-at");
-            const sourceInfo = document.getElementById("source-info");
-
-            newsTitle.textContent = article.title;
-            newsDescription.textContent = article.description ? article.description : '';
-            newsLink.href = article.url;
-            publishedAt.textContent = `Publicado el ${formatDate(article.publishedAt)}`;
-            sourceInfo.innerHTML = `<i class="bi bi-person"></i> ${article.author ? article.author : 'Autor desconocido'} - <i class="bi bi-journal"></i> ${article.source.name}`;
-        }
-
-        // Función para el formato de  la fecha de noticia
-        function formatDate(dateString) {
-            const date = new Date(dateString);
-            return date.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' });
-        }
-
-        // Llamar a la función fetchNews al cargar la página
-        window.onload = fetchNews;
-
+    
     
   </script>
   </body>

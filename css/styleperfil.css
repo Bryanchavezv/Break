@@ -1,5 +1,5 @@
 body {
-    background-image: url('../assets/img/Diseno-sin-titulo-1.png'); /* Cambia 'ruta/de/tu/imagen.jpg' por la URL o la ruta de tu imagen de fondo */
+    background-image: url('../assets/img/Diseno-sin-titulo-1.png'); 
     background-size: cover; /* La imagen de fondo cubrirá todo el área del elemento */
     background-position: center; /* La imagen de fondo se centrará */
     background-repeat: no-repeat; /* La imagen de fondo no se repetirá */
