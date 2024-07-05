@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,41 +7,27 @@
     <title>Break - Configuración</title>
   
     <!-- Icono de sitio -->
-    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
   
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   
     <!-- Archivos CSS Files -->
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet"> <!-- Animacion del inicio -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="{% static 'redsocial/bts/aos/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
+    <link href="{% static 'redsocial/bts/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/bts/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/bts/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
   
-      <!-- Icono de sitio -->
-     <link href="../assets/img/favicon.png" rel="icon">
-
-  <!-- Google Fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Archivos CSS Files -->
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet"> <!-- Animacion del inicio -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
- 
-
-  <!-- Llama a hoja de estilo -->
-    <link href="../css/stylelogin.css" rel="stylesheet">
-
-    <link href="../css/stylenav.css" rel="stylesheet">
-    <link href="../css/styleperfil.css" rel="stylesheet">
+    <!-- Llama a hoja de estilo -->
+    <link href="{% static 'redsocial/css/stylelogin.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/css/stylenav.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/css/styleperfil.css' %}" rel="stylesheet">
 </head>
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end">
-        <a class="navbar-brand" href="./inicio.html">
-            <img src="../assets/img/Logo 3.png" alt="Marca" style="height: 140px; width: 150px;">
+        <a class="navbar-brand" href="{% url 'inicio' %}">
+            <img src="{% static 'redsocial/img/Logo 3.png' %}" alt="Marca" style="height: 140px; width: 150px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./inicio.html">Inicio</a>
+                    <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -62,7 +49,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./login.html">
+                    <a class="nav-link" href="{% url 'login' %}">
                         <i class="bi bi-door-closed"></i> Cerrar sesión
                     </a>
                 </li>
@@ -148,8 +135,8 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="../assets/vendor/aos/aos.js"></script>
-<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'redsocial/bts/aos/aos.js' %}"></script>
+<script src="{% static 'redsocial/bts/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

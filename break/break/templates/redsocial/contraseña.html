@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,32 +8,31 @@
   <title>Break - ¿Olvidaste tu contraseña?</title>
 
   <!-- Icono de sitio -->
-  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Archivos CSS Files -->
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet"> <!-- Animacion del inicio -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-
+  <!-- Archivos CSS -->
+  <link href="{% static 'redsocial/bts/aos/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
+  <link href="{% static 'redsocial/bts/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'redsocial/bts/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'redsocial/bts/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
 
   <!-- Llama a hoja de estilo -->
-  <link href="../css/stylelogin.css" rel="stylesheet">
+  <link href="{% static 'redsocial/css/stylelogin.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
-     <!-- Olvidaste tu contraseña -->
+  <!-- Olvidaste tu contraseña -->
   <div class="vh-100">
     <div class="container h-custom">
       <div class="row justify-content-center align-items-center h-100">
 
         <!-- Logotipo -->
         <div class="col-md-9 col-lg-6 col-xl-5">
-          <img src="../assets/img/Logo 3.png" class="img-fluid" alt="Logo Break">
+          <img src="{% static 'redsocial/img/Logo 3.png' %}" class="img-fluid" alt="Logo Break">
         </div>
 
         <!-- Formulario recuperar contraseña -->
@@ -53,7 +53,7 @@
               <button type="button" class="btn btn-primary btn-lg custom-button">Recuperar</button>
 
               <!-- Enlace para iniciar sesión -->
-              <p class="small fw-bold mt-2 pt-1 mb-0">¿Recuerdas tu contraseña? <a href="login.html" class="link-danger">Iniciar sesión</a></p>
+              <p class="small fw-bold mt-2 pt-1 mb-0">¿Recuerdas tu contraseña? <a href="{% url 'login' %}" class="link-danger">Iniciar sesión</a></p>
             </div>
 
           </form>
@@ -61,28 +61,27 @@
       </div>
     </div>
 
-      <!-- Pie de página -->
-      <div class="custom-footer text-center text-md-start py-4 px-4 px-xl-5">
-    <!-- Copyright -->
-    <div class="text-white">
-      Copyright Break. All Rights Reserved
+    <!-- Pie de página -->
+    <div class="custom-footer text-center text-md-start py-4 px-4 px-xl-5">
+      <!-- Copyright -->
+      <div class="text-white">
+        Copyright Break. All Rights Reserved
+      </div>
     </div>
   </div>
-</div>
   <!-- FIN Olvidaste tu contraseña -->
 
-
   <!-- atras -->
-  <a href="../index.html" class="back-to-home d-flex align-items-center justify-content-center" title="Volver a Inicio">
+  <a href="{% url 'index' %}" class="back-to-home d-flex align-items-center justify-content-center" title="Volver a Inicio">
     <i class="bi bi-arrow-left-circle-fill"></i>
   </a>
 
-  <!-- Vendor JS archivos  -->
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- bts JS archivos -->
+  <script src="{% static 'redsocial/bts/aos/aos.js' %}"></script>
+  <script src="{% static 'redsocial/bts/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Archivo main de Javascript (Funcionalidades)-->
-  <script src="../assets/js/main.js"></script>
+  <script src="{% static 'redsocial/js/main.js' %}"></script>
 </body>
 
 </html>
