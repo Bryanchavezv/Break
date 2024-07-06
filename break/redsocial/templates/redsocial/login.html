@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Break - Iniciar sesión</title>
+  <title>redsocial - Iniciar sesión</title>
 
   <!-- Icono de sitio -->
   <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
@@ -19,7 +19,7 @@
   <link href="{% static 'redsocial/bts/boxicons.min.css' %}" rel="stylesheet">
 
   <!-- Llama a hoja de estilo -->
-  <link href="{% static 'css/stylelogin.css' %}" rel="stylesheet">
+  <link href="{% static 'redsocial/css/stylelogin.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     <div class="container h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-9 col-lg-6 col-xl-5">
-          <img src="{% static 'redsocial/img/Logo 3.png' %}" class="img-fluid" alt="Logo Break">
+          <img src="{% static 'redsocial/img/Logo 3.png' %}" class="img-fluid" alt="Logo redsocial">
         </div>
 
         <!-- Formulario de Inicio de Sesión -->
@@ -73,7 +73,7 @@
                   Recuérdame
                 </label>
               </div>
-              <a href="{% url 'password_reset' %}" class="text-body">Olvidaste la contraseña?</a>
+              <a href="{% url 'contraseña' %}" class="text-body">Olvidaste la contraseña?</a>
             </div>
 
             <!-- ENTER -->
@@ -81,7 +81,7 @@
               <button type="button" class="btn btn-primary btn-lg custom-button" onclick="validateLoginForm()">Entrar</button>
 
               <!-- Enlace para registrar -->
-              <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a href="{% url 'register' %}" class="link-danger">Registrar</a></p>
+              <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a href="{% url 'registrar' %}" class="link-danger">Registrar</a></p>
             </div>
           </form>
         </div>
@@ -91,7 +91,7 @@
     
       <!-- Pie de Página -->
       <div class="text-white mb-3 mb-md-0">
-        Copyright Break. All Rights Reserved
+        Copyright redsocial. All Rights Reserved
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@
 
 
   <!-- atras -->
-  <a href="{% url 'home' %}" class="back-to-home d-flex align-items-center justify-content-center" title="Volver a Inicio">
+  <a href="{% url 'index' %}" class="back-to-home d-flex align-items-center justify-content-center" title="Volver a Inicio">
     <i class="bi bi-arrow-left-circle-fill"></i>
   </a>
 
@@ -108,7 +108,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido a Break!</h5>
+        <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido a redsocial!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

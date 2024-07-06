@@ -1,0 +1,267 @@
+/* Estilos para los enlaces */
+a {
+  color: #fdc134; /* Color enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para los enlaces hover */
+a:hover {
+  color: #fdd067; /* Color enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para los títulos */
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif; /* Fuente para los títulos */
+}
+
+/* Carousel */
+.d-item {
+  height: 500px; /* Altura carrusel */
+  
+}
+
+.d-img {
+  height: 100%; /* Altura imagen dentro carrusel */
+  object-fit: cover; /* Tamaño y recorte para cubrir el contenedor */
+  filter: brightness(0.6); /* Brillo de la imagen para oscurecerla */
+}
+
+/* Boton contactanos */
+.btn-get-started {
+  color: #213b52; /* Color del texto */
+  border-radius: 50px; /* Borde redondo */
+  padding: 8px 35px 10px 35px; /* Relleno */
+  border: 2px solid #fdc134; /* Borde */
+  transition: all ease-in-out 0.3s; /* Transición suave */
+  display: inline-block; /* Mostrar como bloque */
+  background: #fdc134; /* Color de fondo */
+}
+
+.btn-get-started:hover {
+  background: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto */
+}
+
+
+
+/*--------------- Botón de volver arriba ------------------*/
+
+/* Estilos para el botón de volver arriba */
+.back-to-top {
+  position: fixed; /* Posición fija */
+  visibility: hidden; /* Inicialmente no visible */
+  opacity: 0; /* Opacidad inicial */
+  right: 15px; /* Posición a la derecha */
+  bottom: 15px; /* Posición en la parte inferior */
+  z-index: 99999; /* Superponer */
+  background: #fdc134; /* Color botón */
+  width: 40px; /* Ancho botón */
+  height: 40px; /* Altura botón */
+  border-radius: 50px; /* Borde redondo */
+  transition: all 0.4s; /* Transición suave */
+}
+
+/* Icono dentro del botón */
+.back-to-top i {
+  font-size: 24px; /* Tamaño icono */
+  color: #fff; /* Color icono */
+  line-height: 0; /* Alineación vertical icono */
+}
+
+/* Estilos para el botón hover */
+.back-to-top:hover {
+  background: #fdc134; /* Color boton */
+  color: #fff; /* Color texto  */
+}
+
+/* Estilos para el botón cuando está activo (visible) */
+.back-to-top.active {
+  visibility: visible; /* Hacer visible */
+  opacity: 1; /* Opacidad completa */
+}
+
+
+/*--------------- Sección del Inicio ------------------*/
+
+/* Fondo inicio */
+.inicio {
+  width: 100%; /* Ancho completo */
+  padding: 0 0 0 0; /* Relleno */
+  background: #213b52; /* Color de fondo */
+  background: linear-gradient(180deg, #213b52 0%, rgb(33, 60, 84) 35%, rgb(32, 69, 100) 100%); /* Degradado lineal */
+}
+
+.inicio h1 {
+  margin: 0 0 15px 0; /* Margen */
+  font-size: 48px; /* Tamaño del texto */
+  font-weight: 700; /* Grosor del texto */
+  line-height: 56px; /* Altura de línea */
+  color: #d2e0ed; /* Color del texto */
+  font-family: "Poppins", sans-serif; /* Familia de fuente */
+}
+
+.inicio h2 {
+  color: #fff; /* Color del texto */
+  margin-bottom: 30px; /* Margen inferior */
+  font-size: 22px; /* Tamaño del texto */
+}
+
+/* Boton comencemos */
+.inicio .btn-get-started {
+  color: #213b52; /* Color del texto */
+  border-radius: 50px; /* Borde redondo */
+  padding: 8px 35px 10px 35px; /* Relleno */
+  border: 2px solid #fdc134; /* Borde */
+  transition: all ease-in-out 0.3s; /* Transición suave */
+  display: inline-block; /* Mostrar como bloque */
+  background: #fdc134; /* Color de fondo */
+}
+
+.inicio .btn-get-started:hover {
+  background: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto */
+}
+
+
+
+/*--------------- Footer - Final ------------------*/
+
+
+.footer {
+  background: url("../assets/img/footer-bg.jpg") center center no-repeat; /* Imagen de fondo centrada */
+  color: #fff; /* Color del texto */
+  font-size: 14px; /* Tamaño del texto */
+  position: relative; /* Posición relativa */
+}
+
+/*color a la imagen final*/
+.footer::before {
+  content: ""; /* Contenido vacío */
+  position: absolute; /* Posición absoluta */
+  left: 0; /* Posición desde la izquierda */
+  right: 0; /* Posición desde la derecha */
+  top: 0; /* Posición desde arriba */
+  bottom: 0; /* Posición desde abajo */
+  background: rgba(26, 46, 64, 0.85); /* Fondo con transparencia */
+  z-index: 1; /* Índice z */
+}
+
+.footer .footer-top {
+  position: relative; /* Posición relativa */
+  z-index: 2; /* Índice z */
+  text-align: center; /* Alinear al centro */
+  padding: 80px 0; /* Relleno */
+}
+
+.footer .footer-top h3 {
+  font-size: 36px; /* Tamaño del texto */
+  font-weight: 700; /* Grosor del texto */
+  color: #fff; /* Color del texto */
+  position: relative; /* Posición relativa */
+  font-family: "Poppins", sans-serif; /* Familia de fuente */
+  padding-bottom: 0; /* Relleno inferior */
+  margin-bottom: 0; /* Margen inferior */
+}
+
+.footer .footer-top p {
+  font-size: 15; /* Tamaño del texto */
+  font-style: italic; /* Estilo del texto */
+  margin: 30px 0 0 0; /* Margen */
+  padding: 0; /* Relleno */
+}
+
+/* Seccion suscribirse */
+.footer .footer-top .footer-newsletter {
+  text-align: center; /* Alinear al centro */
+  font-size: 15px; /* Tamaño del texto */
+  margin-top: 30px; /* Margen superior */
+}
+/* formulario email */
+.footer .footer-top .footer-newsletter form {
+  background: #fff; /* Color de fondo */
+  padding: 6px 10px; /* Relleno */
+  position: relative; /* Posición relativa */
+  border-radius: 50px; /* Borde redondo */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: left; /* Alinear a la izquierda */
+}
+
+/* Ingresar email */
+.footer .footer-top .footer-newsletter form input[type=email] {
+  border: 0; /* Borde */
+  padding: 4px 8px; /* Relleno */
+  width: calc(100% - 100px); /* Ancho calculado */
+}
+
+/* boton suscribirse */
+.footer .footer-top .footer-newsletter form input[type=submit] {
+  position: absolute; /* Posición absoluta */
+  top: 0; /* Posición desde arriba */
+  right: -1px; /* Posición desde la derecha */
+  bottom: 0; /* Posición desde abajo */
+  border: 0; /* Borde */
+  background: none; /* Fondo transparente */
+  font-size: 16px; /* Tamaño del texto */
+  padding: 0 20px; /* Relleno */
+  background: #fdc134; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  transition: 0.3s; /* Transición */
+  border-radius: 50px; /* Borde redondo */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.footer .footer-top .footer-newsletter form input[type=submit]:hover {
+  background: #fcb102; /* Color de fondo al pasar el mouse */
+}
+
+/* icono WS y instagram */
+.footer .footer-top .social-links {
+  margin-top: 30px; /* Margen superior */
+}
+
+/* Contorno WS y instagram */
+.footer .footer-top .social-links a {
+  font-size: 18px; /* Tamaño del texto */
+  display: inline-block; /* Mostrar como bloque en línea */
+  background: #284864; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  line-height: 1; /* Altura de línea */
+  padding: 8px 0; /* Relleno */
+  margin-right: 4px; /* Margen derecho */
+  border-radius: 50%; /* Borde redondo */
+  text-align: center; /* Alinear al centro */
+  width: 36px; /* Ancho */
+  height: 36px; /* Altura */
+  transition: 0.3s; /* Transición */
+}
+
+.footer .footer-top .social-links a:hover {
+  background: #fcb102; /* Color de fondo al pasar el mouse */
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Sin decoración de texto */
+}
+
+/* Barra final */
+.footer .footer-bottom {
+  border-top: 1px solid #1a2e40; /* Borde superior */
+  z-index: 2; /* Índice z */
+  position: relative; /* Posición relativa */
+  padding-top: 40px; /* Relleno superior */
+  padding-bottom: 40px; /* Relleno inferior */
+}
+
+/* Copyright */
+.footer .copyright {
+  text-align: center; /* Alinear al centro */
+  float: left; /* Flotar a la izquierda */
+}
+
+/* credito */
+.footer .credits {
+  float: right; /* Flotar a la derecha */
+  text-align: center; /* Alinear al centro */
+  font-size: 13px; /* Tamaño del texto */
+}
+
+
