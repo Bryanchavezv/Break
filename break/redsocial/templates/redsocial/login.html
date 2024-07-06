@@ -38,19 +38,7 @@
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
           <form method="post">
             {% csrf_token %}
-            <div>
-                {{ form.username.label_tag }}
-                {{ form.username }}
-            </div>
-            <div>
-                {{ form.password.label_tag }}
-                {{ form.password }}
-            </div>
-            {% if form.non_field_errors %}
-                <div>
-                    {{ form.non_field_errors }}
-                </div>
-            {% endif %}
+            {{ form.as_p }}
             <button type="submit">Iniciar Sesión</button>
         </form>
         </div>
@@ -72,33 +60,12 @@
     <i class="bi bi-arrow-left-circle-fill"></i>
   </a>
 
-  <!-- Modal -->
-<div class="modal fade" id="modalBienvenido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">¡Bienvenido a redsocial!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ¡Gracias por visitarnos! Por favor, inicia sesión para acceder a tu cuenta.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Jquery para activar el script del modal-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Activación del modal -->
-<script>
-  $(document).ready(function() {
-    $('#modalBienvenido').modal('show');
-  });
-</script>
+
 
   <!-- Archivos JS -->
   <script src="{% static 'redsocial/js/aos.js' %}"></script>
