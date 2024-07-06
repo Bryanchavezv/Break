@@ -42,11 +42,11 @@ class MensajeForo(models.Model):
         return f"Mensaje por {self.autor} el {self.fecha_publicacion}"
 
 class Libro(models.Model):
-    isbn        = models.CharField(primary_key=True, max_length=13)
-    titulo      = models.CharField(max_length=100)
-    autor       = models.CharField(max_length=50)
-    editorial   = models.CharField(max_length=50)
-    precio      = models.DecimalField(max_digits=8, decimal_places=2)
+    id_libro   = models.CharField(primary_key=True, max_length=13)
+    titulo = models.CharField(max_length=100)
+    autor = models.CharField(max_length=50)
+    editorial = models.CharField(max_length=50)
+    precio = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.titulo

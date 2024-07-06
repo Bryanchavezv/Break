@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib import messages
-from .forms import RegistrarForm, LoginForm
-from .models import Usuario
+from .forms import RegistrarForm, LoginForm, LibroForm
+from .models import Usuario, Libro
 
 def index(request):
     return render(request, 'redsocial/index.html')
@@ -10,16 +10,15 @@ def index(request):
 def contraseña(request):
     return render(request, 'redsocial/contraseña.html')
 
-
 def editar_perfil(request):
     return render(request, 'redsocial/editar_perfil.html')
 
 def marketplace(request):
-    return render(request, 'redsocial/marketplace.html')
+    libros = Libro.objects.all()
+    return render(request, 'redsocial/marketplace.html', {'libros': libros})
 
 def carro(request):
     return render(request, 'redsocial/carro.html')
-
 
 def registrar(request):
     if request.method == 'POST':
@@ -53,8 +52,6 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'redsocial/login.html', {'form': form})
 
-
-
 def inicio(request):
     usuario_id = request.session.get('usuario_id')
     if usuario_id:
@@ -62,3 +59,15 @@ def inicio(request):
         return render(request, 'redsocial/inicio.html', {'usuario': usuario})
     else:
         return redirect('login')
+
+def agregar_libro(request):
+    if request.method == 'POST':
+        form = LibroForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('marketplace')  # Redirige de vuelta a la página del marketplace
+    else:
+        form = LibroForm()
+    return render(request, 'redsocial/marketplace.html', {'form': form})
+
+

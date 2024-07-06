@@ -11,4 +11,6 @@ urlpatterns = [
     path('contraseña', views.contraseña, name='contraseña'), 
     path('marketplace', views.marketplace, name='marketplace'), 
     path('carro', views.carro, name='carro'), 
+
+    path('agregar_libro', views.agregar_libro, name='agregar_libro'),
 ]

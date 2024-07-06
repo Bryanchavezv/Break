@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usuario
+from .models import Usuario, Libro
 
 class RegistrarForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
@@ -19,3 +19,12 @@ class RegistrarForm(forms.ModelForm):
 class LoginForm(forms.Form):
     email = forms.EmailField(label="Correo electrónico", max_length=254)
     password = forms.CharField(widget=forms.PasswordInput)
+
+
+class LibroForm(forms.ModelForm):
+    class Meta:
+        model = Libro
+        fields = ['id_libro', 'titulo', 'autor', 'editorial', 'precio']
+        widgets = {
+            'precio': forms.NumberInput(attrs={'step': '0.01'}),
+        }
