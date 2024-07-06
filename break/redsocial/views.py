@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib import messages
 from .forms import RegistrarForm, LoginForm, LibroForm
@@ -71,3 +71,23 @@ def agregar_libro(request):
     return render(request, 'redsocial/marketplace.html', {'form': form})
 
 
+def eliminar_libro(request, id_libro):
+    libro = get_object_or_404(Libro, id_libro=id_libro)
+    libro.delete()
+    messages.success(request, 'Libro eliminado con éxito')
+    return redirect('marketplace')
+
+
+def editar_libro(request, id_libro):
+    libro = get_object_or_404(Libro, id_libro=id_libro)
+    
+    if request.method == 'POST':
+        form = LibroForm(request.POST, instance=libro)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Libro actualizado con éxito')
+            return redirect('marketplace')
+    else:
+        form = LibroForm(instance=libro)
+    
+    return render(request, 'redsocial/editar_libro.html', {'form': form, 'libro': libro})

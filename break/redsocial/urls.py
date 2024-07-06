@@ -13,4 +13,6 @@ urlpatterns = [
     path('carro', views.carro, name='carro'), 
 
     path('agregar_libro', views.agregar_libro, name='agregar_libro'),
+    path('eliminar_libro/<int:id_libro>/', views.eliminar_libro, name='eliminar_libro'),
+    path('editar_libro/<int:id_libro>/', views.editar_libro, name='editar_libro'),
 ]

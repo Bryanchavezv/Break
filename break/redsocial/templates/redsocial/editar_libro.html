@@ -1,0 +1,34 @@
+<!-- templates/redsocial/editar_libro.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Editar Libro</title>
+    <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end">
+    <!-- Aquí va el contenido de tu barra de navegación -->
+</nav>
+
+<!-- Contenido principal -->
+<div class="container">
+    <h1>Editar Libro</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+    
+    <a href="{% url 'marketplace' %}" class="btn btn-secondary">Cancelar</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{% static 'redsocial/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
