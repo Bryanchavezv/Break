@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Rol(models.Model):
     id_rol = models.AutoField(primary_key=True, db_column='idrol')
@@ -32,14 +33,18 @@ class Usuario(models.Model):
     
 
 
+
+
 class MensajeForo(models.Model):
-    id_mensaje          = models.AutoField(primary_key=True)
-    autor               = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    contenido           = models.TextField()
-    fecha_publicacion   = models.DateTimeField(auto_now_add=True)
+    id_mensaje = models.AutoField(primary_key=True)
+    autor = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    contenido = models.TextField()
+    fecha_publicacion = models.DateTimeField(auto_now_add=True)
+    mensaje_padre = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='respuestas')
 
     def __str__(self):
         return f"Mensaje por {self.autor} el {self.fecha_publicacion}"
+
 
 class Libro(models.Model):
     id_libro   = models.CharField(primary_key=True, max_length=13)
@@ -59,6 +64,7 @@ class CompraLibro(models.Model):
 
     def __str__(self):
         return f"Compra de {self.cantidad} unidades de {self.libro.titulo} el {self.fecha_compra}"
+
 
 
 
