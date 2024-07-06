@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Rol(models.Model):
     id_rol = models.AutoField(primary_key=True, db_column='idrol')
@@ -46,11 +47,11 @@ class MensajeForo(models.Model):
 
 
 class Libro(models.Model):
-    isbn        = models.CharField(primary_key=True, max_length=13)
-    titulo      = models.CharField(max_length=100)
-    autor       = models.CharField(max_length=50)
-    editorial   = models.CharField(max_length=50)
-    precio      = models.DecimalField(max_digits=8, decimal_places=2)
+    id_libro   = models.CharField(primary_key=True, max_length=13)
+    titulo = models.CharField(max_length=100)
+    autor = models.CharField(max_length=50)
+    editorial = models.CharField(max_length=50)
+    precio = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.titulo
@@ -63,6 +64,7 @@ class CompraLibro(models.Model):
 
     def __str__(self):
         return f"Compra de {self.cantidad} unidades de {self.libro.titulo} el {self.fecha_compra}"
+
 
 
 

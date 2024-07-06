@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usuario,MensajeForo
+from .models import Usuario,MensajeForo,Libro
 
 class RegistrarForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
@@ -37,4 +37,20 @@ class ResponderMensajeForm(forms.ModelForm):
         fields = ['contenido']
         widgets = {
             'contenido': forms.Textarea(attrs={'class': 'form-control', 'rows': 2, 'placeholder': 'Escribe un comentario...'}),
+        }
+
+class LibroForm(forms.ModelForm):
+    class Meta:
+        model = Libro
+        fields = ['id_libro', 'titulo', 'autor', 'editorial', 'precio']
+        widgets = {
+            'precio': forms.NumberInput(attrs={'step': '0.01'}),
+        }
+
+class UsuarioForm(forms.ModelForm):
+    class Meta:
+        model = Usuario
+        fields = ['nombre', 'apellido_paterno', 'apellido_materno', 'email', 'password', 'telefono']
+        widgets = {
+            'password': forms.PasswordInput(),
         }
