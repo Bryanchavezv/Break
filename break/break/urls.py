@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include  # redirecciona al urls.py de redsocial
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('redsocial.urls')),  # Incluye las rutas de la aplicación redsocial
+    path('', include ('redsocial.urls'))
 ]
