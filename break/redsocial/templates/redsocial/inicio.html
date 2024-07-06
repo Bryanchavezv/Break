@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,12 +13,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Archivos externos CSS Files -->
-  <link href="{% static 'redsocial/bts/aos/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
-  <link href="{% static 'redsocial/bts/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'redsocial/bts/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'redsocial/bts/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+      <!-- Archivos CSS Files -->
+ <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
+    
+  <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet"> <!-- Bootstrap -->
+        
+  <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet"> <!-- Bootstrap iconos -->
 
+ 
   <!-- Llama a hoja de estilo -->
   <link href="{% static 'redsocial/css/styleinicio.css' %}" rel="stylesheet">
   <link href="{% static 'redsocial/css/stylenav.css' %}" rel="stylesheet">
@@ -198,8 +201,8 @@
 
 <!-- Scripts de Bootstrap y jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="{% static 'redsocial/bts/aos/aos.js' %}"></script>
-<script src="{% static 'redsocial/bts/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'redsocial/css/aos.js' %}"></script>
+<script src="{% static 'redsocial/js/bootstrap.bundle.min.js' %}"></script>
 
 <!-- Archivo de API-->
 <script src="{% static 'redsocial/js/api.js' %}"></script>

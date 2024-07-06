@@ -129,7 +129,6 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .footer {
-  background: url("../assets/img/footer-bg.jpg") center center no-repeat; /* Imagen de fondo centrada */
   color: #fff; /* Color del texto */
   font-size: 14px; /* Tamaño del texto */
   position: relative; /* Posición relativa */
