@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usuario
+from .models import Usuario,MensajeForo
 
 class RegistrarForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
@@ -19,3 +19,22 @@ class RegistrarForm(forms.ModelForm):
 class LoginForm(forms.Form):
     email = forms.EmailField(label="Correo electrónico", max_length=254)
     password = forms.CharField(widget=forms.PasswordInput)
+
+
+
+
+class PublicarMensajeForm(forms.ModelForm):
+    class Meta:
+        model = MensajeForo
+        fields = ['contenido']
+        widgets = {
+            'contenido': forms.Textarea(attrs={'class': 'form-control', 'rows': 3, 'placeholder': 'Escribe algo...'}),
+        }
+
+class ResponderMensajeForm(forms.ModelForm):
+    class Meta:
+        model = MensajeForo
+        fields = ['contenido']
+        widgets = {
+            'contenido': forms.Textarea(attrs={'class': 'form-control', 'rows': 2, 'placeholder': 'Escribe un comentario...'}),
+        }

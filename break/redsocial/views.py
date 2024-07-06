@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib import messages
-from .forms import RegistrarForm, LoginForm
-from .models import Usuario
+from .forms import RegistrarForm, LoginForm,PublicarMensajeForm, ResponderMensajeForm
+from .models import Usuario,MensajeForo
 
 def index(request):
     return render(request, 'redsocial/index.html')
@@ -51,10 +51,44 @@ def login_view(request):
 
 
 
+
+
 def inicio(request):
     usuario_id = request.session.get('usuario_id')
-    if usuario_id:
-        usuario = Usuario.objects.get(rut=usuario_id)
-        return render(request, 'redsocial/inicio.html', {'usuario': usuario})
-    else:
+    if not usuario_id:
         return redirect('login')
+    
+    usuario = Usuario.objects.get(rut=usuario_id)
+    
+    if request.method == 'POST':
+        if 'publicar' in request.POST:
+            form = PublicarMensajeForm(request.POST)
+            if form.is_valid():
+                mensaje = form.save(commit=False)
+                mensaje.autor = usuario
+                mensaje.save()
+                messages.success(request, 'Mensaje publicado con éxito')
+                return redirect('inicio')
+        elif 'responder' in request.POST:
+            mensaje_id = request.POST.get('mensaje_id')
+            mensaje_padre = MensajeForo.objects.get(id_mensaje=mensaje_id)
+            form = ResponderMensajeForm(request.POST)
+            if form.is_valid():
+                respuesta = form.save(commit=False)
+                respuesta.autor = usuario
+                respuesta.mensaje_padre = mensaje_padre
+                respuesta.save()
+                messages.success(request, 'Respuesta publicada con éxito')
+                return redirect('inicio')
+    else:
+        form = PublicarMensajeForm()
+        respuesta_form = ResponderMensajeForm()
+    
+    mensajes = MensajeForo.objects.filter(mensaje_padre__isnull=True).order_by('-fecha_publicacion')
+    
+    return render(request, 'redsocial/inicio.html', {
+        'usuario': usuario,
+        'form': form,
+        'respuesta_form': respuesta_form,
+        'mensajes': mensajes
+    })
