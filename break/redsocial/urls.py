@@ -9,4 +9,6 @@ urlpatterns = [
     path('inicio', views.inicio, name='inicio'), 
     path('editar_perfil', views.editar_perfil, name='editar_perfil'), 
     path('contraseña', views.contraseña, name='contraseña'), 
+    path('marketplace', views.marketplace, name='marketplace'), 
+    path('carro', views.carro, name='carro'), 
 ]

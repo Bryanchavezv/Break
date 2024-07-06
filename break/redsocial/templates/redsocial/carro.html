@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Break - Carrito de Compras</title>
+
+  <!-- Icono de sitio -->
+  <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Archivos CSS Files -->
+  <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
+  <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet"> <!-- Bootstrap -->
+  <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet"> <!-- Bootstrap iconos -->
+
+  <!-- Llama a hoja de estilo -->
+  <link href="{% static 'redsocial/css/styleinicio.css' %}" rel="stylesheet">
+  <link href="{% static 'redsocial/css/stylenav.css' %}" rel="stylesheet">
+  <link href="{% static 'redsocial/css/styleapi.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end">
+  <a class="navbar-brand" href="{% url 'inicio' %}">
+    <img src="{% static 'redsocial/img/Logo 3.png' %}" alt="Marca" style="height: 140px; width: 150px;">
+  </a>    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'inicio' %}">
+            <i class="bi bi-person"></i> Perfil
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'editar_perfil' %}">
+            <i class="bi bi-gear"></i> Configuración
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'marketplace' %}">
+            <i class="bi bi-shop"></i> Marketplace
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'carro' %}">
+          <i class="bi bi-cart"></i> Carrito
+      </a>
+  </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'login' %}">
+          <i class="bi bi-door-closed"></i> Cerrar sesión
+      </a>
+  </li>
+    
+    </ul>
+  </div>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container-fluid content">
+  <div class="row">
+      <!-- Barra lateral izquierda -->
+      <div class="col-md-3 sidebar">
+          <div class="profile-section">
+              <h5>Mi Perfil</h5>
+              <img src="{% static 'redsocial/img/bart.png' %}" class="mr-3 rounded-circle" alt="Imagen de usuario" style="height: 80px; width: 80px;">
+              <p><strong>{{ usuario.email }}</strong></p>
+              <p><a href="{% url 'editar_perfil' %}">Ver perfil</a></p>
+              <hr>
+              <h6>Enlaces rápidos</h6>
+              <ul class="list-unstyled">
+                  <li><a href="#">Amigos</a></li>
+                  <li><a href="#">Grupos</a></li>
+                  <li><a href="#">Eventos</a></li>
+                  <li><a href="#">Mensajes</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Área de carrito de compras -->
+      <div class="col-md-9 main-content">
+          <div class="cart-section">
+              <h5>Carrito de Compras</h5>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                          <tr>
+                              <th scope="col">Producto</th>
+                              <th scope="col">Precio</th>
+                              <th scope="col">Cantidad</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">Acciones</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- Producto 1 -->
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <img src="{% static 'redsocial/img/producto1.jpg' %}" class="mr-3" alt="Producto 1" style="height: 80px; width: 80px;">
+                                      <div class="media-body">
+                                          <h5 class="mt-0">Producto 1</h5>
+                                          Descripción breve del producto 1.
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>$10.00</td>
+                              <td>
+                                  <input type="number" class="form-control" value="1">
+                              </td>
+                              <td>$10.00</td>
+                              <td>
+                                  <button class="btn btn-danger btn-sm">Eliminar</button>
+                              </td>
+                          </tr>
+
+                          <!-- Producto 2 -->
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <img src="{% static 'redsocial/img/producto2.jpg' %}" class="mr-3" alt="Producto 2" style="height: 80px; width: 80px;">
+                                      <div class="media-body">
+                                          <h5 class="mt-0">Producto 2</h5>
+                                          Descripción breve del producto 2.
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>$20.00</td>
+                              <td>
+                                  <input type="number" class="form-control" value="2">
+                              </td>
+                              <td>$40.00</td>
+                              <td>
+                                  <button class="btn btn-danger btn-sm">Eliminar</button>
+                              </td>
+                          </tr>
+
+                          <!-- Producto 3 -->
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <img src="{% static 'redsocial/img/producto3.jpg' %}" class="mr-3" alt="Producto 3" style="height: 80px; width: 80px;">
+                                      <div class="media-body">
+                                          <h5 class="mt-0">Producto 3</h5>
+                                          Descripción breve del producto 3.
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>$30.00</td>
+                              <td>
+                                  <input type="number" class="form-control" value="1">
+                              </td>
+                              <td>$30.00</td>
+                              <td>
+                                  <button class="btn btn-danger btn-sm">Eliminar</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+              <!-- Resumen del pedido -->
+              <div class="order-summary">
+                  <h5>Resumen del Pedido</h5>
+                  <ul class="list-group">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Subtotal
+                          <span>$80.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Envío
+                          <span>$5.00</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                          Total
+                          <span>$85.00</span>
+                      </li>
+                  </ul>
+                  <br>
+                  <button class="btn btn-primary btn-block">Proceder al Pago</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{% static 'redsocial/css/aos.js' %}"></script>
+<script src="{% static 'redsocial/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Archivo de API-->
+<script src="{% static 'redsocial/js/api.js' %}"></script>
+
+</body>
+</html>

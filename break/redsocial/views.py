@@ -14,7 +14,11 @@ def contraseña(request):
 def editar_perfil(request):
     return render(request, 'redsocial/editar_perfil.html')
 
+def marketplace(request):
+    return render(request, 'redsocial/marketplace.html')
 
+def carro(request):
+    return render(request, 'redsocial/carro.html')
 
 
 def registrar(request):
