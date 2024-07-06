@@ -36,42 +36,23 @@
 
         <!-- Formulario de Inicio de Sesión -->
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form id="loginForm">
-            <br><br>
-
-
-            <!-- Ingresar Email -->
-            <div class="form-group">
-              <label class="form-label" for="formEmail">Email (Obligatorio)</label>
-              <input type="email" id="formEmaillogin" class="form-control form-control-lg" placeholder="Ingresar email valido">
+          <form method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.username.label_tag }}
+                {{ form.username }}
             </div>
-
-            <!-- Ingresar contraseña-->
-            <div class="form-group">
-              <label class="form-label" for="formContraseñalogin">Contraseña (Obligatorio)</label>
-              <input type="password" id="formContraseñalogin" class="form-control form-control-lg" placeholder="Ingresar contraseña">
+            <div>
+                {{ form.password.label_tag }}
+                {{ form.password }}
             </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-              
-              <!-- Recordar y recuperar contraseña -->
-              <div class="form-check mb-0">
-                <input class="form-check-input me-2" type="checkbox" value="" id="formcheckpass">
-                <label class="form-check-label" for="formcheck">
-                  Recuérdame
-                </label>
-              </div>
-              <a href="{% url 'contraseña' %}" class="text-body">Olvidaste la contraseña?</a>
-            </div>
-
-            <!-- ENTER -->
-            <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="button" class="btn btn-primary btn-lg custom-button" onclick="validateLoginForm()">Entrar</button>
-
-              <!-- Enlace para registrar -->
-              <p class="small fw-bold mt-2 pt-1 mb-0">No tienes una cuenta? <a href="{% url 'registrar' %}" class="link-danger">Registrar</a></p>
-            </div>
-          </form>
+            {% if form.non_field_errors %}
+                <div>
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+            <button type="submit">Iniciar Sesión</button>
+        </form>
         </div>
       </div>
     </div>

@@ -39,49 +39,65 @@
 
         <!-- Formulario de Registro -->
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form method="post" id="registrarForm"> <!-- Agregamos un ID al formulario para referenciarlo desde JavaScript -->
+          <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-
-            
-
-            <!-- Ingresar Nombre -->
-            <div class="form-group">
-              <label class="form-label" for="formNombreUsuario">Nombre usuario </label>
-              <input type="text" id="formNombre" class="form-control" placeholder="Ingresar tu nombre de usuario" />
+            <div>
+                {{ form.rut.errors }}
+                <label for="{{ form.rut.id_for_label }}">RUT:</label>
+                {{ form.rut }}
             </div>
-  
-            <!-- Ingresar Email -->
-            <div class="form-group">
-              <label class="form-label" for="formEmail" title="Ejemplo: estudiante@dominio.cl.">Email (Obligatorio)</label>
-              <input type="email" id="formEmail" class="form-control" placeholder="Ingresar email válido" />
+            <div>
+                {{ form.nombre.errors }}
+                <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+                {{ form.nombre }}
             </div>
-  
-            <!-- Seleccionar Rol -->
-            <div class="form-group">
-              <label class="form-label" for="formRol" title="¿Estudiante o Docente?">Rol (Obligatorio)</label>
-              <select class="form-select" id="formRol">
-                <option value="" disabled selected>Seleccionar rol</option>
-                <option value="docente">Docente</option>
-                <option value="alumno">Alumno</option>
-              </select>
+            <div>
+                {{ form.apellido_paterno.errors }}
+                <label for="{{ form.apellido_paterno.id_for_label }}">Apellido Paterno:</label>
+                {{ form.apellido_paterno }}
             </div>
-  
-            <!-- Ingresar contraseña-->
-            <div class="form-group">
-              <label class="form-label" for="formContraseña" title="La contraseña debe tener al menos 8 caracteres, incluyendo letras mayúsculas, minúsculas, números y caracteres especiales.">Contraseña (Obligatorio)</label>
-              <input type="password" id="formContraseña" class="form-control" placeholder="Ingresar contraseña" />
+            <div>
+                {{ form.apellido_materno.errors }}
+                <label for="{{ form.apellido_materno.id_for_label }}">Apellido Materno:</label>
+                {{ form.apellido_materno }}
             </div>
-            
-            <!-- ENTER -->
-            <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="submit" class="btn btn-primary btn-lg custom-button">Registrarse</button>
-  
-              <!-- Enlace para Iniciar Sesión -->
-              <p class="small fw-bold mt-2 pt-1 mb-0">Ya tienes una cuenta? <a href="{% url 'login' %}" class="link-danger">Iniciar sesión</a></p>
+            <div>
+                {{ form.fecha_nacimiento.errors }}
+                <label for="{{ form.fecha_nacimiento.id_for_label }}">Fecha de Nacimiento:</label>
+                {{ form.fecha_nacimiento }}
             </div>
-  
-          </form>
+            <div>
+                {{ form.id_rol.errors }}
+                <label for="{{ form.id_rol.id_for_label }}">Rol:</label>
+                {{ form.id_rol }}
+            </div>
+            <div>
+                {{ form.id_genero.errors }}
+                <label for="{{ form.id_genero.id_for_label }}">Género:</label>
+                {{ form.id_genero }}
+            </div>
+            <div>
+                {{ form.telefono.errors }}
+                <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
+                {{ form.telefono }}
+            </div>
+            <div>
+                {{ form.email.errors }}
+                <label for="{{ form.email.id_for_label }}">Email:</label>
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.direccion.errors }}
+                <label for="{{ form.direccion.id_for_label }}">Dirección:</label>
+                {{ form.direccion }}
+            </div>
+            <div>
+                {{ form.activo.errors }}
+                <label for="{{ form.activo.id_for_label }}">Activo:</label>
+                {{ form.activo }}
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
         </div>
       </div>
     </div>
