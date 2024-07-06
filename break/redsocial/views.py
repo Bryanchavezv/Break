@@ -3,6 +3,7 @@ from django.contrib.auth.hashers import make_password, check_password
 from django.contrib import messages
 from .forms import RegistrarForm, LoginForm, LibroForm
 from .models import Usuario, Libro
+import logging
 
 def index(request):
     return render(request, 'redsocial/index.html')
@@ -91,3 +92,47 @@ def editar_libro(request, id_libro):
         form = LibroForm(instance=libro)
     
     return render(request, 'redsocial/editar_libro.html', {'form': form, 'libro': libro})
+
+
+
+def carro_view(request):
+    carrito_ids = request.session.get('carrito', [])
+    libros = Libro.objects.filter(id_libro__in=carrito_ids)
+    total = sum(libro.precio for libro in libros)
+    return render(request, 'redsocial/carro.html', {'carrito': libros, 'total': total})
+
+
+logger = logging.getLogger(__name__)
+
+
+def agregar_al_carrito(request, libro_id):
+    libro = get_object_or_404(Libro, id_libro=libro_id)
+    carrito = request.session.get('carrito', [])
+    
+    if libro_id not in carrito:
+        carrito.append(libro_id)
+        request.session['carrito'] = carrito
+        logger.debug(f'Libro {libro_id} añadido al carrito.')
+
+    return redirect('marketplace')
+
+
+def eliminar_del_carrito(request, libro_id):
+    carrito = request.session.get('carrito', [])
+    
+    if libro_id in carrito:
+        carrito.remove(libro_id)
+        request.session['carrito'] = carrito
+
+    return redirect('carro')
+
+
+def vaciar_carrito(request):
+    if request.method == 'POST':
+        # Aquí debes obtener el carrito del usuario actual y vaciarlo
+        carrito = request.session.get('carrito', [])
+        carrito.clear()  # Vaciar el carrito
+        request.session['carrito'] = carrito
+        messages.success(request, 'Carrito vaciado exitosamente.')
+        return redirect('carro')  # Redirigir al carrito
+    return redirect('carro')  # Si no es un POST, redirigir al carrito

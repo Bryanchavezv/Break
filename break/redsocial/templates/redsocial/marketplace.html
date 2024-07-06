@@ -102,45 +102,37 @@
               <br>
               
               <!-- Lista de libros -->
-              <div class="book-list">
-                  <h5>Lista de Libros</h5>
-                  <div class="row">
-                      {% for libro in libros %}
-                      <div class="col-md-4">
-                          <div class="card">
-                              <img src="{% static 'redsocial/img/producto1.jpg' %}" class="card-img-top" alt="{{ libro.titulo }}">
-                              <div class="card-body">
-                                  <h5 class="card-title">{{ libro.titulo }}</h5>
-                                  <p class="card-text">Autor: {{ libro.autor }}</p>
-                                  <p class="card-text">Editorial: {{ libro.editorial }}</p>
-                                  <p class="card-text">Precio: ${{ libro.precio }}</p>
-                                  <a href="#" class="btn btn-primary">Añadir al Carrito</a>
-                                  <!-- Enlace para eliminar el libro -->
-                                  <a href="{% url 'eliminar_libro' libro.id_libro %}" class="btn btn-danger">Eliminar</a>
-                                  <!-- Enlace para editar el libro -->
-                                  <a href="{% url 'editar_libro' libro.id_libro %}" class="btn btn-warning">Editar</a>
-                              </div>
-                          </div>
-                      </div>
-                      {% empty %}
-                      <p>No hay libros disponibles.</p>
-                      {% endfor %}
-                  </div>
-              </div>
-              <br>
-              <a href="{% url 'carro' %}" class="btn btn-secondary">Ver Carrito</a>
-          </div>
-      </div>
-  </div>
-</div>
+                <div class="book-list">
+                    <h5>Lista de Libros</h5>
+                    <div class="row">
+                        {% for libro in libros %}
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ libro.titulo }}</h5>
+                                    <p class="card-text">Autor: {{ libro.autor }}</p>
+                                    <p class="card-text">Editorial: {{ libro.editorial }}</p>
+                                    <p class="card-text">Precio: ${{ libro.precio }}</p>
+                                    <!-- Enlace para añadir al carrito -->
+                                    <a href="{% url 'agregar_al_carrito' libro.id_libro %}" class="btn btn-primary">Añadir al Carrito</a>
+                                    <!-- Enlace para eliminar el libro -->
+                                    <a href="{% url 'eliminar_libro' libro.id_libro %}" class="btn btn-danger">Eliminar</a>
+                                    <!-- Enlace para editar el libro -->
+                                    <a href="{% url 'editar_libro' libro.id_libro %}" class="btn btn-warning">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <!-- Este bloque se ejecutará si no hay libros -->
+                        {% endfor %}
+                    </div>
+                </div>
+                <br>
+                <a href="{% url 'carro' %}" class="btn btn-secondary">Ver Carrito</a>
 
 <!-- Scripts de Bootstrap y jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="{% static 'redsocial/css/aos.js' %}"></script>
 <script src="{% static 'redsocial/js/bootstrap.bundle.min.js' %}"></script>
-
-<!-- Archivo de API-->
-<script src="{% static 'redsocial/js/api.js' %}"></script>
 
 </body>
 </html>
