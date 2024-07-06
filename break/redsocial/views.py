@@ -1,65 +1,60 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from .forms import RegistroUsuarioForm,LoginForm
-
-
+from django.contrib.auth.hashers import make_password, check_password
+from django.contrib import messages
+from .forms import RegistrarForm, LoginForm
+from .models import Usuario
 
 def index(request):
-
     return render(request, 'redsocial/index.html')
-
-def login(request):
-    return render(request, 'redsocial/login.html')
-
 
 def contraseña(request):
     return render(request, 'redsocial/contraseña.html')
 
-def inicio(request):
-    return render(request, 'redsocial/inicio.html')
-
-
-def registrar(request):
-    return render(request, 'redsocial/registrar.html')
 
 def editar_perfil(request):
     return render(request, 'redsocial/editar_perfil.html')
 
 
 
-def registrar_usuario(request):
+
+def registrar(request):
     if request.method == 'POST':
-        form = RegistroUsuarioForm(request.POST)
+        form = RegistrarForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            # Redirigir al usuario a la página deseada después del registro
-            return redirect('redsocial/inicio.html')  # Cambia 'pagina_principal' por la URL a la que deseas redirigir
+            usuario = form.save(commit=False)
+            usuario.password = make_password(form.cleaned_data['password'])
+            usuario.save()
+            messages.success(request, 'Cuenta creada con éxito')
+            return redirect('login')
     else:
-        form = RegistroUsuarioForm()
-    return render(request, 'redsocial/registro.html', {'form': form})
+        form = RegistrarForm()
+    return render(request, 'redsocial/registrar.html', {'form': form})
 
-
-
-def iniciar_sesion(request):
+def login_view(request):
     if request.method == 'POST':
-        form = LoginForm(request, data=request.POST)
+        form = LoginForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password')
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                # Redirigir al usuario a la página deseada después del inicio de sesión
-                return redirect('redsocial/inicio.html')  # Cambia 'pagina_principal' por la URL a la que deseas redirigir
-            else:
-                # Manejar el caso cuando las credenciales no son válidas
-                # Por ejemplo, mostrar un mensaje de error
-                form.add_error(None, 'Usuario o contraseña incorrectos')
+            try:
+                usuario = Usuario.objects.get(email=email)
+                if check_password(password, usuario.password):
+                    request.session['usuario_id'] = usuario.rut  # Guardar el ID del usuario en la sesión
+                    return redirect('inicio')
+                else:
+                    messages.error(request, 'Correo electrónico o contraseña incorrectos')
+            except Usuario.DoesNotExist:
+                messages.error(request, 'Correo electrónico o contraseña incorrectos')
     else:
         form = LoginForm()
-    
     return render(request, 'redsocial/login.html', {'form': form})
+
+
+
+def inicio(request):
+    usuario_id = request.session.get('usuario_id')
+    if usuario_id:
+        usuario = Usuario.objects.get(rut=usuario_id)
+        return render(request, 'redsocial/inicio.html', {'usuario': usuario})
+    else:
+        return redirect('login')

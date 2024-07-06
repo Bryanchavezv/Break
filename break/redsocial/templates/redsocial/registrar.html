@@ -41,62 +41,8 @@
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
           <form method="post">
             {% csrf_token %}
-            <div>
-                {{ form.rut.errors }}
-                <label for="{{ form.rut.id_for_label }}">RUT:</label>
-                {{ form.rut }}
-            </div>
-            <div>
-                {{ form.nombre.errors }}
-                <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
-                {{ form.nombre }}
-            </div>
-            <div>
-                {{ form.apellido_paterno.errors }}
-                <label for="{{ form.apellido_paterno.id_for_label }}">Apellido Paterno:</label>
-                {{ form.apellido_paterno }}
-            </div>
-            <div>
-                {{ form.apellido_materno.errors }}
-                <label for="{{ form.apellido_materno.id_for_label }}">Apellido Materno:</label>
-                {{ form.apellido_materno }}
-            </div>
-            <div>
-                {{ form.fecha_nacimiento.errors }}
-                <label for="{{ form.fecha_nacimiento.id_for_label }}">Fecha de Nacimiento:</label>
-                {{ form.fecha_nacimiento }}
-            </div>
-            <div>
-                {{ form.id_rol.errors }}
-                <label for="{{ form.id_rol.id_for_label }}">Rol:</label>
-                {{ form.id_rol }}
-            </div>
-            <div>
-                {{ form.id_genero.errors }}
-                <label for="{{ form.id_genero.id_for_label }}">Género:</label>
-                {{ form.id_genero }}
-            </div>
-            <div>
-                {{ form.telefono.errors }}
-                <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
-                {{ form.telefono }}
-            </div>
-            <div>
-                {{ form.email.errors }}
-                <label for="{{ form.email.id_for_label }}">Email:</label>
-                {{ form.email }}
-            </div>
-            <div>
-                {{ form.direccion.errors }}
-                <label for="{{ form.direccion.id_for_label }}">Dirección:</label>
-                {{ form.direccion }}
-            </div>
-            <div>
-                {{ form.activo.errors }}
-                <label for="{{ form.activo.id_for_label }}">Activo:</label>
-                {{ form.activo }}
-            </div>
-            <button type="submit">Registrar</button>
+            {{ form.as_p }}
+            <button type="submit">Registrarse</button>
         </form>
         </div>
       </div>

@@ -67,7 +67,7 @@
           <div class="profile-section">
               <h5>Mi Perfil</h5>
               <img src="{% static 'redsocial/img/bart.png' %}" class="mr-3 rounded-circle" alt="Imagen de usuario" style="height: 80px; width: 80px;">
-              <p><strong>Nombre de Usuario</strong></p>
+              <p><strong>{{ usuario.email }}</strong></p>
               <p><a href="{% url 'editar_perfil' %}">Ver perfil</a></p>
               <hr>
               <h6>Enlaces rápidos</h6>
