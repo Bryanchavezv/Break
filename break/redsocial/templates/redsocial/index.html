@@ -7,171 +7,127 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Break - Comunidad Social</title>
 
-      <!-- Icono de sitio -->
-      <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
-  
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    
-      <!-- Archivos CSS Files -->
-      <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
-    
-      <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet"> <!-- Bootstrap -->
-        
-      <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet"> <!-- Bootstrap iconos -->
+  <!-- Icono de sitio -->
+  <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
 
-  <!-- Llama a hoja de estilo -->
-       <link href="{% static 'redsocial/css/style.css' %}" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
- 
+  <!-- Archivos CSS Files -->
+  <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet"> <!-- Animacion del inicio -->
+  <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet"> <!-- Bootstrap -->
+  <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet"> <!-- Bootstrap iconos -->
+  <link href="{% static 'redsocial/css/style.css' %}" rel="stylesheet"> <!-- Llama a hoja de estilo -->
+
 </head>
 
 <body>
   <!--  Inicio  -->
-
-  <div class = "inicio">
+  <div class="inicio">
     <div class="container">
-      <div class="row d-flex align-items-center"">
-      <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
-        <h1>¡Únete y haz parte de la comunidad redsocial!</h1>
-        <h2>¡Conéctate, descubre y charla! Tu red social educativa, donde el aprendizaje se une con la diversión.</h2>
-        <a href="{% url 'login' %}" class="btn-get-started scrollto">Comenzemos</a>
-      </div>
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
+          <h1>¡Únete y haz parte de la comunidad redsocial!</h1>
+          <h2>¡Conéctate, descubre y charla! Tu red social educativa, donde el aprendizaje se une con la diversión.</h2>
+          <a href="{% url 'login' %}" class="btn-get-started scrollto">Comenzamos</a>
+        </div>
 
-      <!-- Imagen -->
-      <div class="col-lg-6 order-1 order-lg-2 incio-img" data-aos="fade-left">
-        <img src="{% static 'redsocial/img/hero-img.png' %}" class="img-fluid" alt="">
+        <!-- Imagen -->
+        <div class="col-lg-6 order-1 order-lg-2 incio-img" data-aos="fade-left">
+          <img src="{% static 'redsocial/img/hero-img.png' %}" class="img-fluid" alt="">
+        </div>
       </div>
     </div>
-    </div>
-
   </div>
 
   <!-- carousel index -->
-
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <!-- Indicadores de diapositivas -->
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <!-- Indicadores de diapositivas -->
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-
       <!-- Contenido de la diapositiva -->
       <div class="carousel-item active d-item">
         <img src="{% static 'redsocial/img/slide1.jpg' %}" class="d-block w-100 d-img" alt="slider 1">
-        <div class="carousel-caption top-0 mt-4">
-            <p class="mt-5 fs-3 text-uppercase">
-              Todos juntos
-            </p>
-            <h1 class="display-1 fw-bolder text-capitalize" >Estudiemos Conectados</h1>
-            <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contactanos</button>
+        <div class="carousel-caption d-none d-md-block">
+          <p class="mt-5 fs-3 text-uppercase">Todos juntos</p>
+          <h1 class="display-1 fw-bolder text-capitalize">Estudiemos Conectados</h1>
+          <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contáctanos</button>
         </div>
       </div>
-
-        <div class="carousel-item d-item">
-          <img src="{% static 'redsocial/img/slide2.jpeg' %}" class="d-block w-100 d-img" alt="slider 2">
-          <div class="carousel-caption top-0 mt-4">
-              <p class="mt-5 fs-3 text-uppercase">
-                Todos juntos
-              </p>
-              <h1 class="display-1 fw-bolder text-capitalize" >Estudiemos Conectados</h1>
-              <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contactanos</button>
-          </div>
+      <div class="carousel-item d-item">
+        <img src="{% static 'redsocial/img/slide2.jpeg' %}" class="d-block w-100 d-img" alt="slider 2">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="mt-5 fs-3 text-uppercase">Todos juntos</p>
+          <h1 class="display-1 fw-bolder text-capitalize">Estudiemos Conectados</h1>
+          <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contáctanos</button>
         </div>
-
-          <div class="carousel-item d-item">
-            <img src="{% static 'redsocial/img/slide3.jpg' %}" class="d-block w-100 d-img" alt="slider 3">
-            <div class="carousel-caption top-0 mt-4">
-                <p class="mt-5 fs-3 text-uppercase">Todos juntos</p>
-                <h1 class="display-1 fw-bolder text-capitalize">Estudiemos Conectados</h1>
-                <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contactanos</button>
-            </div>
+      </div>
+      <div class="carousel-item d-item">
+        <img src="{% static 'redsocial/img/slide3.jpg' %}" class="d-block w-100 d-img" alt="slider 3">
+        <div class="carousel-caption d-none d-md-block">
+          <p class="mt-5 fs-3 text-uppercase">Todos juntos</p>
+          <h1 class="display-1 fw-bolder text-capitalize">Estudiemos Conectados</h1>
+          <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contáctanos</button>
         </div>
-        <div class="carousel-item d-item"> 
-            <img src="{% static 'redsocial/img/slide2.jpeg' %}" class="d-block w-100" alt="slider 2">
-            <div class="carousel-caption top-0 mt-4">
-                <p class="mt-5 fs-3 text-uppercase">Todos juntos</p>
-                <h1 class="display-1 fw-bolder text-capitalize">Estudiemos Conectados</h1>
-                <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contactanos</button>
-            </div>
-        </div>
-        <div class="carousel-item d-item">
-            <img src="{% static 'redsocial/img/slide3.jpg' %}" class="d-block w-100" alt="slider 3">
-            <div class="carousel-caption top-0 mt-4">
-                <p class="mt-5 fs-3 text-uppercase">Todos juntos</p>
-                <h1 class="display-1 fw-bolder text-capitalize">Estudiemos Conectados</h1>
-                <button class="btn-get-started scrollto px-4 py-2 fs5 mt-5">Contactanos</button>
-            </div>
-        </div>
+      </div>
     </div>
     <!-- Controles del carrusel -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
     </button>
-</div>
+  </div>
 
-
-
-   
   <!-- Final -->
-  <footer class = "footer">
+  <footer class="footer">
     <div class="footer-top">
-
       <div class="container">
-
-        <div class="row  justify-content-center">
+        <div class="row justify-content-center">
           <div class="col-lg-6">
             <h3>BREAK</h3>
             <p>Libera tu potencial educativo con Break: ¡cada pausa es una aventura de descubrimiento y conexión!</p>
           </div>
         </div>
-
-         <!-- Formulario de suscripción -->
+        <!-- Formulario de suscripción -->
         <div class="row footer-newsletter justify-content-center">
           <div class="col-lg-6">
             <form action="" method="post">
-
               <!-- Ingresar email y boton -->
-              <input type="email" name="email" placeholder="Escribe tu Email"><input type="submit" value="Suscribete">
+              <input type="email" name="email" placeholder="Escribe tu Email">
+              <input type="submit" value="Suscríbete">
             </form>
           </div>
         </div>
-    </div>
-
-    <!-- pie de página -->
-    <div class="container footer-bottom clearfix">
-
-      <!-- DErechos de autor y diseñador -->
-      <div class="copyright">
-        &copy; Copyright <strong><span>Break</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
-        Diseñado por <a href="https://www.instagram.com/bryanchavezal/">Código Creativo</a>
+      <!-- pie de página -->
+      <div class="container footer-bottom clearfix">
+        <!-- Derechos de autor y diseñador -->
+        <div class="copyright">
+          &copy; Copyright <strong><span>Break</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Diseñado por <a href="https://www.instagram.com/bryanchavezal/">Código Creativo</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- atras -->
+  <!-- atrás -->
   <a href="{% url 'index' %}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{% static 'redsocial/js/aos.js' %}"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-  <!-- Script de funciones propias Js -->
   <script src="{% static 'redsocial/js/main.js' %}"></script>
-
 </body>
 
 </html>
