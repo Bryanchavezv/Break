@@ -15,7 +15,7 @@
   <!-- Archivos CSS Files -->
   <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet"> <!-- Animación del inicio -->
   <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet"> <!-- Bootstrap -->
-  <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet"> <!-- Bootstrap iconos -->
+
 
   <!-- Llama a hoja de estilo -->
   <link href="{% static 'redsocial/css/styleinicio.css' %}" rel="stylesheet">
@@ -77,10 +77,7 @@
                 <hr>
                 <h6>Enlaces rápidos</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#">Amigos</a></li>
-                    <li><a href="#">Grupos</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Mensajes</a></li>
+                    <li><a href="{% url 'fetch_news' %}">Noticias</a></li>
                 </ul>
             </div>
         </div>

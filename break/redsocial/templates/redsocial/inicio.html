@@ -14,8 +14,7 @@
 
     <!-- Archivos CSS -->
     <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet">
-    <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static 'redsocial/css/styleinicio.css' %}" rel="stylesheet">
     <link href="{% static 'redsocial/css/stylenav.css' %}" rel="stylesheet">
     <link href="{% static 'redsocial/css/styleapi.css' %}" rel="stylesheet">
@@ -37,16 +36,22 @@
                     <i class="bi bi-person"></i> Perfil
                 </a>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'editar_perfil' %}">
                     <i class="bi bi-gear"></i> Configuración
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'marketplace' %}">
-                    <i class="bi bi-door-closed"></i> Marketplace
-                </a>
-            </li>
+              <a class="nav-link" href="{% url 'marketplace' %}">
+                  <i class="bi bi-door-closed"></i> Marketplace
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'carro' %}">
+                <i class="bi bi-door-closed"></i> Carrito
+            </a>
+        </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">
                     <i class="bi bi-door-closed"></i> Cerrar sesión
@@ -64,18 +69,16 @@
             <div class="profile-section">
                 <h5>Mi Perfil</h5>
                 <img src="{% static 'redsocial/img/bart.png' %}" class="mr-3 rounded-circle" alt="Imagen de usuario" style="height: 80px; width: 80px;">
-                <p><strong>{{ usuario.nombre }} {{ usuario.apellido_paterno }}</strong><br>{{ usuario.email }}</p>
+                <p><strong>{{ usuario.nombre }} {{ usuario.apellido_paterno }} <br> {{ usuario.email }}</strong></p>
                 <p><a href="{% url 'editar_perfil' %}">Ver perfil</a></p>
                 <hr>
                 <h6>Enlaces rápidos</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#">Amigos</a></li>
-                    <li><a href="#">Grupos</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Mensajes</a></li>
+                    <li><a href="{% url 'fetch_news' %}">Noticias</a></li>
                 </ul>
             </div>
         </div>
+
 
         <!-- Área de publicaciones -->
         <div class="col-md-6 main-content">

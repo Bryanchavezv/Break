@@ -10,6 +10,7 @@ from django.contrib.auth import logout
 from django.urls import reverse
 from django.http import JsonResponse
 from django.views import View 
+from django.contrib.auth.views import LoginView
 
 
 def index(request):
@@ -131,7 +132,7 @@ def marketplace(request):
 def carro(request):
     return render(request, 'redsocial/carro.html')
 
-
+@login_required
 def agregar_libro(request):
     if request.method == 'POST':
         form = LibroForm(request.POST)
@@ -142,14 +143,14 @@ def agregar_libro(request):
         form = LibroForm()
     return render(request, 'redsocial/marketplace.html', {'form': form})
 
-
+@login_required
 def eliminar_libro(request, id_libro):
     libro = get_object_or_404(Libro, id_libro=id_libro)
     libro.delete()
     messages.success(request, 'Libro eliminado con éxito')
     return redirect('marketplace')
 
-
+@login_required
 def editar_libro(request, id_libro):
     libro = get_object_or_404(Libro, id_libro=id_libro)
     
@@ -243,7 +244,6 @@ def eliminar_usuario(request):
         return redirect('login')
     
     return render(request, 'redsocial/eliminar_usuario.html', {'usuario': usuario})
-<<<<<<< HEAD
 
 
 
@@ -268,5 +268,6 @@ def fetch_news(request):
         return render(request, 'redsocial/noticias.html', {'error': f'Request error occurred: {req_err}'})
     except Exception as err:
         return render(request, 'redsocial/noticias.html', {'error': f'An error occurred: {err}'})
-=======
->>>>>>> 737c5c6ea22dc1a589f8c88b99493fd55dd86257
+
+class CustomLoginView(LoginView):
+    template_name = 'redsocial/login.html'
