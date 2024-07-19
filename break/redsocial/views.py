@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib import messages
@@ -7,6 +8,9 @@ from .models import Usuario,MensajeForo,Libro,CompraLibro,Genero,Rol
 import logging
 from django.contrib.auth import logout
 from django.urls import reverse
+from django.http import JsonResponse
+from django.views import View 
+
 
 def index(request):
     return render(request, 'redsocial/index.html')
@@ -239,3 +243,27 @@ def eliminar_usuario(request):
         return redirect('login')
     
     return render(request, 'redsocial/eliminar_usuario.html', {'usuario': usuario})
+
+
+
+def fetch_news(request):
+    api_key = "f0b00ca53b6e46cda812db9aef58b5d8"
+    url = f"https://newsapi.org/v2/top-headlines?country=mx&apiKey={api_key}"
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        news_data = response.json()
+        
+        # Verifica si el contenido es JSON y si hay artículos
+        if news_data.get('status') == 'ok' and news_data.get('articles'):
+            return render(request, 'redsocial/noticias.html', {'articles': news_data['articles']})
+        else:
+            return render(request, 'redsocial/noticias.html', {'error': 'No news available or API error'})
+    
+    except requests.exceptions.HTTPError as http_err:
+        return render(request, 'redsocial/noticias.html', {'error': f'HTTP error occurred: {http_err}'})
+    except requests.exceptions.RequestException as req_err:
+        return render(request, 'redsocial/noticias.html', {'error': f'Request error occurred: {req_err}'})
+    except Exception as err:
+        return render(request, 'redsocial/noticias.html', {'error': f'An error occurred: {err}'})

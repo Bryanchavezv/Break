@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Últimas Noticias</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'redsocial/css/styleinicio.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/css/stylenav.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/css/styleapi.css' %}" rel="stylesheet">
+</head>
+<body>
+ 
+
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end">
+    <a class="navbar-brand" href="{% url 'inicio' %}">
+        <img src="{% static 'redsocial/img/Logo 3.png' %}" alt="Marca" style="height: 140px; width: 150px;">
+    </a>    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'inicio' %}">
+                    <i class="bi bi-person"></i> Perfil
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'editar_perfil' %}">
+                    <i class="bi bi-gear"></i> Configuración
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'marketplace' %}">
+                  <i class="bi bi-door-closed"></i> Marketplace
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'carro' %}">
+                <i class="bi bi-door-closed"></i> Carrito
+            </a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">
+                    <i class="bi bi-door-closed"></i> Cerrar sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container-fluid content">
+    <div class="row">
+        <!-- Barra lateral izquierda -->
+        <div class="col-md-3 sidebar">
+            <div class="profile-section">
+                <h5>Mi Perfil</h5>
+                <img src="{% static 'redsocial/img/bart.png' %}" class="mr-3 rounded-circle" alt="Imagen de usuario" style="height: 80px; width: 80px;">
+                <p><strong>{{ usuario.nombre }} {{ usuario.apellido_paterno }} <br> {{ usuario.email }}</strong></p>
+                <p><a href="{% url 'editar_perfil' %}">Ver perfil</a></p>
+                <hr>
+                <h6>Enlaces rápidos</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'fetch_news' %}">Noticias</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <div class="container mt-4">
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% else %}
+            <div class="row">
+                {% for article in articles %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ article.title|default:"No Title" }}</h5>
+
+                                <a href="{{ article.url }}" class="btn btn-primary btn-sm" target="_blank">Leer más</a>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Publicado: {{ article.publishedAt }}
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                        </div><div class="row">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
