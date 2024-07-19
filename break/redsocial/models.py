@@ -31,10 +31,6 @@ class Usuario(models.Model):
         return self.email
 
     
-
-
-
-
 class MensajeForo(models.Model):
     id_mensaje = models.AutoField(primary_key=True)
     autor = models.ForeignKey(Usuario, on_delete=models.CASCADE)
