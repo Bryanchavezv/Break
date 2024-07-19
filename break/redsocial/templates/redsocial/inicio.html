@@ -3,25 +3,25 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Break - Inicio</title>
 
     <!-- Icono de sitio -->
-    <link href="{% static 'redsocial/img/favicon.png' %}" rel="icon">
+    <link rel="icon" href="{% static 'redsocial/img/favicon.png' %}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Archivos CSS Files -->
-    <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet"> <!-- Animación del inicio -->
-    <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet"> <!-- Bootstrap -->
-    <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet"> <!-- Bootstrap iconos -->
-    <!-- Llama a hoja de estilo -->
+    <!-- Archivos CSS -->
+    <link href="{% static 'redsocial/css/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'redsocial/css/bootstrap-icons.css' %}" rel="stylesheet">
     <link href="{% static 'redsocial/css/styleinicio.css' %}" rel="stylesheet">
     <link href="{% static 'redsocial/css/stylenav.css' %}" rel="stylesheet">
     <link href="{% static 'redsocial/css/styleapi.css' %}" rel="stylesheet">
 </head>
 <body>
+
 <!-- Barra de navegación -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm justify-content-end">
     <a class="navbar-brand" href="{% url 'inicio' %}">
@@ -37,17 +37,16 @@
                     <i class="bi bi-person"></i> Perfil
                 </a>
             </li>
-            
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'editar_perfil' %}">
                     <i class="bi bi-gear"></i> Configuración
                 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'marketplace' %}">
-                  <i class="bi bi-door-closed"></i> Marketplace
-              </a>
-          </li>
+                <a class="nav-link" href="{% url 'marketplace' %}">
+                    <i class="bi bi-door-closed"></i> Marketplace
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">
                     <i class="bi bi-door-closed"></i> Cerrar sesión
@@ -65,7 +64,7 @@
             <div class="profile-section">
                 <h5>Mi Perfil</h5>
                 <img src="{% static 'redsocial/img/bart.png' %}" class="mr-3 rounded-circle" alt="Imagen de usuario" style="height: 80px; width: 80px;">
-                <p><strong>{{ usuario.nombre }} {{ usuario.apellido_paterno }} <br> {{ usuario.email }}</strong></p>
+                <p><strong>{{ usuario.nombre }} {{ usuario.apellido_paterno }}</strong><br>{{ usuario.email }}</p>
                 <p><a href="{% url 'editar_perfil' %}">Ver perfil</a></p>
                 <hr>
                 <h6>Enlaces rápidos</h6>
@@ -120,14 +119,14 @@
                                         </div>
                                     </div>
                                     {% endfor %}
-                                     <!-- Formulario para agregar comentario -->
-                                     <form method="post">
-                                      {% csrf_token %}
-                                      <div class="form-group">
-                                          <textarea class="form-control" rows="2" name="contenido" placeholder="Escribe un comentario..."></textarea>
-                                      </div>
-                                      <input type="hidden" name="mensaje_id" value="{{ mensaje.id_mensaje }}">
-                                      <button type="submit" class="btn btn-secondary" name="responder">Comentar</button>
+                                    <!-- Formulario para agregar comentario -->
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="2" name="contenido" placeholder="Escribe un comentario..."></textarea>
+                                        </div>
+                                        <input type="hidden" name="mensaje_id" value="{{ mensaje.id_mensaje }}">
+                                        <button type="submit" class="btn btn-secondary" name="responder">Comentar</button>
                                     </form>
                                 </div>
                             </div>
@@ -161,21 +160,9 @@
                     {% endfor %}
                 </ul>
             </div>
-
-        <!-- Últimas noticias API -->
-  <div class="container">
-    <div id="news-list" class="tarjeta">
-        <div class="tarjetanoticias">
-            <div class="news-heading">Últimas noticias</div>
-            <i class="bi bi-newspaper"></i>
-            <h5 class="titulotarjeta" id="news-title"></h5>
-            <p class="textotarjeta-text" id="news-description"></p>
-            <a href="#" id="news-link" class="btn btn-primary btn-sm" target="_blank">Leer más</a>
-            <div class="autorinfo" id="source-info"></div>
-            <div class="fechapublicacion" id="published-at"></div>
+            
         </div>
     </div>
-</div>
 </div>
 
 <!-- Scripts de Bootstrap y jQuery -->
@@ -186,27 +173,5 @@
 <!-- Archivo de API -->
 <script src="{% static 'redsocial/js/api.js' %}"></script>
 
-<script>
-$(document).ready(function() {
-    // Animación suave en los enlaces de navegación
-    $('nav a').on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-                window.location.hash = hash;
-            });
-        }
-    });
-
-    // Desplegable animado en la barra de navegación
-    $('.navbar-toggler').on('click', function() {
-        $('#navbarNav').slideToggle();
-    });
-});
-
-</script>
 </body>
 </html>
