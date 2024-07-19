@@ -18,7 +18,6 @@ def index(request):
 def contraseña(request):
     return render(request, 'redsocial/contraseña.html')
 
-
 def editar_perfil(request):
     return render(request, 'redsocial/editar_perfil.html')
 
@@ -89,7 +88,8 @@ def inicio(request):
         'tendencias': tendencias
     })
 
-
+def carro(request):
+    return render(request, 'redsocial/carro.html')
 
 def registrar(request):
     if request.method == 'POST':
@@ -243,6 +243,7 @@ def eliminar_usuario(request):
         return redirect('login')
     
     return render(request, 'redsocial/eliminar_usuario.html', {'usuario': usuario})
+<<<<<<< HEAD
 
 
 
@@ -267,3 +268,5 @@ def fetch_news(request):
         return render(request, 'redsocial/noticias.html', {'error': f'Request error occurred: {req_err}'})
     except Exception as err:
         return render(request, 'redsocial/noticias.html', {'error': f'An error occurred: {err}'})
+=======
+>>>>>>> 737c5c6ea22dc1a589f8c88b99493fd55dd86257
